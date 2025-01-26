@@ -1,7 +1,6 @@
 ---
-title: "bsrl"
+title: "Beyond Steps RL"
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+**Beyond Steps RL** symbolizes the ambition to go beyond conventional boundaries in reinforcement learning (RL). The name reflects the integration of cutting-edge RL techniques with robotic locomotion, especially focusing on quadrupedal robots. It emphasizes innovation, exploration, and the pursuit of advancements that push RL applications beyond mere movement—toward solving real-world challenges with precision and adaptability.
