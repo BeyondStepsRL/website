@@ -1,0 +1,22 @@
+---
+title: "Post"
+
+listing:
+  contents: 
+    - "post/paper/*.qmd"
+    - "post/study/*.qmd"
+  sort: "date desc"
+  type: default
+  table-striped: true
+  table-hover: true
+  categories: cloud
+  sort-ui: true
+  filter-ui: true
+  image-placeholder: def.png
+  
+page-layout: full
+title-block-banner: true
+comments: false
+---
+
+About this site

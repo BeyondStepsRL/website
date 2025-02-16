@@ -4,3 +4,12 @@ title: "Beyond Steps RL"
 
 
 **Beyond Steps RL** symbolizes the ambition to go beyond conventional boundaries in reinforcement learning (RL). The name reflects the integration of cutting-edge RL techniques with robotic locomotion, especially focusing on quadrupedal robots. It emphasizes innovation, exploration, and the pursuit of advancements that push RL applications beyond mere movement—toward solving real-world challenges with precision and adaptability.
+
+
+![](./asset/BSRL_banner.png)
+
+# Members
+
+|[<img src="https://github.com/curieuxjy.png" width="150px"/>](https://github.com/curieuxjy)|[<img src="https://github.com/KimJiHong190.png" width="150px"/>](https://github.com/KimJiHong190)|[<img src="https://github.com/mqjinwon.png" width="150px"/>](https://github.com/mqjinwon)|[<img src="https://github.com/remmarp.png" width="150px"/>](https://github.com/remmarp)|
+|:---:|:---:|:---:|:---:|
+| JungYeon Lee | Jihong Kim | Jinwon Kim | Chanwoo Park | 
