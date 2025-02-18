@@ -4,7 +4,7 @@
     "href": "post.html",
     "title": "Post",
     "section": "",
-    "text": "About this site\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLinear MPC\n\n\n\n\n\n\nmpc\n\n\npaper\n\n\n\nfrom pympc\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Archive Study Materials\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLinear MPC\n\n\n\n\n\n\nmpc\n\n\npaper\n\n\n\nfrom pympc\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "post/study/2025-02-17-mpc.html",
@@ -46,6 +46,6 @@
     "href": "index.html",
     "title": "Beyond Steps RL",
     "section": "",
-    "text": "Beyond Steps RL symbolizes the ambition to go beyond conventional boundaries in reinforcement learning (RL). The name reflects the integration of cutting-edge RL techniques with robotic locomotion, especially focusing on quadrupedal robots. It emphasizes innovation, exploration, and the pursuit of advancements that push RL applications beyond mere movement—toward solving real-world challenges with precision and adaptability.\n\n\nMembers\n\n\n\n\n\n\n\n\n\n\n\nJungYeon Lee\nJihong Kim\nJinwon Kim\nChanwoo Park"
+    "text": "Beyond Steps RL symbolizes the ambition to go beyond conventional boundaries in reinforcement learning (RL). The name reflects the integration of cutting-edge RL techniques with robotic locomotion, especially focusing on quadrupedal robots. It emphasizes innovation, exploration, and the pursuit of advancements that push RL applications beyond mere movement—toward solving real-world challenges with precision and adaptability.\n\n\nStudy Records\n\n\n\nNo.\nPaper\nPresenter\nDate\nFile\n\n\n\n\n1\nNot Only Rewards but Also Constraints\nJihong Kim\n24.09.01\npaper_review\n\n\n2\nAgile But Safe: Learning Collision-Free High-Speed Legged Locomotion\nJungYeon Lee\n24.09.01\npaper_review\n\n\n3\nSpinning Up in Deep RL\nChanwoo Park\n24.09.22\npaper_review\n\n\n4\nNot Only Rewards but Also Constraints II\nJehee Lee\n24.10.06\npaper_review\n\n\n5\nConstrained Policy Optimization\nJinwon Kim\n24.10.06\npaper_review\n\n\n6\nIPO: Interior-point Policy Optimization under Constraints\nJungYeon Lee\n24.10.06\npaper_review\n\n\n7\nTRPO/PPO\nChanwoo Park\n24.10.20\npaper_review\n\n\n8\nConstrained Policy Optimization II\nJihong Kim\n24.10.20\npaper_review\n\n\n9\nLearning-based legged locomotion; state of the art and future perspectives\nJinwon Kim\n24.11.17\npaper_review\n\n\n10\npympc-quadruped\nJihong Kim\n25.01.05\ncode_review\n\n\n11\nModel Predictive Control\nJungYeon Lee\n25.01.05\npaper_review\n\n\n\n\n\nMembers\n\n\n\n\n\n\n\n\n\n\n\nJungYeon Lee\nJihong Kim\nJinwon Kim\nChanwoo Park"
   }
 ]

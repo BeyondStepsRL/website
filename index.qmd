@@ -8,8 +8,26 @@ title: "Beyond Steps RL"
 
 ![](./asset/BSRL_banner.png)
 
+# Study Records
+
+| No. | Paper                                                                                                    | Presenter    | Date     | File                                                                                    |
+|:----|----------------------------------------------------------------------------------------------------------|--------------|----------|-----------------------------------------------------------------------------------------|
+| 1   | [Not Only Rewards but Also Constraints](https://arxiv.org/abs/2308.12517)                                | Jihong Kim   | 24.09.01 | [paper_review](./reviews/%5B0901%5DNot%20Only%20Rewards%20but%20Also%20Constraints.pdf) |
+| 2   | [Agile But Safe: Learning Collision-Free High-Speed Legged Locomotion](https://arxiv.org/abs/2401.17583) | JungYeon Lee | 24.09.01 | [paper_review](./reviews/%5B0901%5DAgile%20But%20Safe.pdf)                              |
+| 3   | [Spinning Up in Deep RL](https://github.com/openai/spinningup)                                             | Chanwoo Park | 24.09.22 | [paper_review](./reviews/%5B0922%5DSpinning%20Up%20in%20Deep%20RL.pdf)                  |
+| 4   | [Not Only Rewards but Also Constraints II ](https://arxiv.org/abs/2308.12517)                                  | Jehee Lee   | 24.10.06 | [paper_review](./reviews/%5B1004%5DNot%20only%20Reward%20but%20Also%20Constraint_2.pdf)                                                             |
+| 5   | [Constrained Policy Optimization](https://arxiv.org/abs/1705.10528)                                        | Jinwon Kim   | 24.10.06 | [paper_review](./reviews/%5B1004%5DConstrained%20Policy%20Optimization.pdf)                       |
+| 6   | [IPO: Interior-point Policy Optimization under Constraints](https://arxiv.org/abs/1910.09615)              | JungYeon Lee | 24.10.06 | [paper_review](./reviews/%5B1004%5DIPO.pdf)                                                   |
+| 7   | [TRPO](https://arxiv.org/abs/1502.05477)/[PPO](https://arxiv.org/abs/1707.06347)                           | Chanwoo Park | 24.10.20 | [paper_review](./reviews/%5B1020%5DTRPO_PPO.pptx)                  |
+| 8   | [Constrained Policy Optimization II](https://arxiv.org/abs/1705.10528)                        | Jihong Kim  | 24.10.20 | [paper_review]()                  |
+| 9   | [Learning-based legged locomotion; state of the art and future perspectives](https://arxiv.org/abs/2406.01152)   | Jinwon Kim  | 24.11.17 | [paper_review](./reviews/%5B1117%5DLearning-based%20legged%20locomotion.pdf)            |
+| 10   | [pympc-quadruped](https://github.com/yinghansun/pympc-quadruped)   | Jihong Kim  | 25.01.05 | [code_review](./reviews/0105.pptx) |
+| 11   | [Model Predictive Control](https://arxiv.org/abs/1509.03580)   | JungYeon Lee  | 25.01.05 | [paper_review](./reviews/%5B0105%5DMPC.pdf)            |
+
+
 # Members
 
-|[<img src="https://github.com/curieuxjy.png" width="150px"/>](https://github.com/curieuxjy)|[<img src="https://github.com/KimJiHong190.png" width="150px"/>](https://github.com/KimJiHong190)|[<img src="https://github.com/mqjinwon.png" width="150px"/>](https://github.com/mqjinwon)|[<img src="https://github.com/remmarp.png" width="150px"/>](https://github.com/remmarp)|
+|[<img src="https://github.com/curieuxjy.png" width="150px"/>](https://github.com/curieuxjy)|[<img src="https://github.com/evronix
+.png" width="150px"/>](https://github.com/evronix)|[<img src="https://github.com/mqjinwon.png" width="150px"/>](https://github.com/mqjinwon)|[<img src="https://github.com/remmarp.png" width="150px"/>](https://github.com/remmarp)|
 |:---:|:---:|:---:|:---:|
 | JungYeon Lee | Jihong Kim | Jinwon Kim | Chanwoo Park | 
