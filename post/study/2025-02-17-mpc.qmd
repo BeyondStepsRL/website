@@ -1,12 +1,13 @@
 ---
 title: "Linear MPC"
-description: from pympc
+description: Basics of Linear MPC Controller for Quadruped Walking Robots
 date: "2025-02-16"
 categories: [mpc, paper]
 image: ../../images/2025-02-17-mpc/mpc00.png
 toc: true
 ---
 
+> This post is sourced from [pympc-quadruped](https://github.com/yinghansun/pympc-quadruped) and translated into Korean.
 
 # Linear Model Predictive Controller
 
