@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-02-18">
 <meta name="description" content="1 round">
 
-<title>BSRL - 3 minitues paper</title>
+<title>3mins papers – BSRL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -85,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -100,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -110,16 +139,26 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#dreamflex" id="toc-dreamflex" class="nav-link active" data-scroll-target="#dreamflex">DreamFLEX</a></li>
+  <li><a href="#rl-augmented-mpc" id="toc-rl-augmented-mpc" class="nav-link" data-scroll-target="#rl-augmented-mpc">RL-augmented MPC</a></li>
+  <li><a href="#caiman" id="toc-caiman" class="nav-link" data-scroll-target="#caiman">CAIMAN</a></li>
+  <li><a href="#safe-rlmpc-testbed" id="toc-safe-rlmpc-testbed" class="nav-link" data-scroll-target="#safe-rlmpc-testbed">Safe RL/MPC Testbed</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">3 minitues paper</h1>
+<h1 class="title">3mins papers</h1>
   <div class="quarto-categories">
     <div class="quarto-category">paper</div>
+    <div class="quarto-category">3mins</div>
   </div>
   </div>
 
@@ -148,9 +187,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TBD</p>
+<section id="dreamflex" class="level1">
+<h1>DreamFLEX</h1>
+<blockquote class="blockquote">
+<p>Learning Fault-Aware Quadrupedal Locomotion Controller for Anomaly Situation in Rough Terrains</p>
+</blockquote>
+<ul>
+<li>로봇이 실제 오래 구동했을 시에 마주칠 수 있는 하드웨어 결함에 대응하는 방법론, joint의 결함이 생기면 이를 감지하여 결함이 있는 상황에 맞춰서 보행 패턴을 재구성</li>
+<li>DreamWaQ의 컨셉을 유지하며 CENet을 FEMNet으로 바꾸어 조인트 결함을 감지하는 것과 연관있는 term <span class="math inline">\(f_t\)</span> 추가</li>
+<li>Joint Fault의 상황은 <code>locked joint와</code>weakened motor` 2가지 경우에 대해 상황을 정의하여 결함이 있는 발을 제외하고서라도 보행하는 것이 목적</li>
+<li><a href="https://arxiv.org/abs/2502.05817">Paper Link</a></li>
+</ul>
+<p><img src="../../images/2025-02-18-papers/dreamflex.jpg" class="img-fluid"></p>
+</section>
+<section id="rl-augmented-mpc" class="level1">
+<h1>RL-augmented MPC</h1>
+<blockquote class="blockquote">
+<p>Learning Agile Locomotion and Adaptive Behaviors via RL-augmented MPC</p>
+</blockquote>
+<ul>
+<li><p>RL을 보완하는 MPC 프레임워크 개발 고속 이동, 모델 불확실성 적응, 장애물 회피를 포함하는 적응형 블라인드(blind) 보행을 실현</p></li>
+<li><p>스탠스 발 힘 제어(stance foot force control)와 스윙 발 반사(swing foot reflection)를 결합 기존 MPC가 직면한 스윙 발 궤적의 불확실성 문제를 해결 모델 불확실성(model uncertainty)에 적응하면서 로봇의 균형 유지 능력을 개선</p></li>
+<li><p>로봇-독립적(robot-agnostic) RL 모듈 도입 다양한 로봇 플랫폼(Unitree A1, Go1, AlienGo)에서 zero-shot transfer 가능 RL 정책이 특정 로봇에 최적화되지 않고 다양한 환경에서도 일반화 가능</p></li>
+<li><p>stance phase와 swing phase를 분리하는 것은 당연한 전제로 생각했었는데, 이를 혼합하려는 시도는 신선하게 느껴짐</p></li>
+<li><p><a href="https://arxiv.org/abs/2310.09442">Paper Link</a></p></li>
+</ul>
+<p><img src="../../images/2025-02-18-papers/rl-aug-mpc.jpeg" class="img-fluid"></p>
+</section>
+<section id="caiman" class="level1">
+<h1>CAIMAN</h1>
+<blockquote class="blockquote">
+<p>Causal Action Influence Detection for Sample Efficient Loco-manipulation</p>
+</blockquote>
+<ul>
+<li>4족보행 로봇이 크고 무거운 물체를 조작하며 이동할 수 있도록 비-파지(non-prehensile) 방식으로 크고 무거운 물체를 조작하며 이동(loco-manipulation)하는 Task를 학습</li>
+<li>causal action influence(인과적 행동 영향, CAI)을 활용하여 로봇이 환경을 제어하는 상태를 탐지하고, 이를 내재적 동기(intrinsically motivated objective)로 삼아 hierarchical control strategy을 통해 학습</li>
+<li>물체를 미는 물리적 결과에 대한 동역학 모델을 학습하여 CAI 값을 끌어낸다는 점이 특이해서 흥미로웠으며, 최근에 Loco-Manipulation이라고 하면 보통 매니퓰레이터를 간단한거라도 다는데 여기에서는 그냥 밀기였음</li>
+<li><a href="https://arxiv.org/abs/2502.00835">Paper Link</a></li>
+</ul>
+<p><img src="../../images/2025-02-18-papers/caiman.png" class="img-fluid"></p>
+</section>
+<section id="safe-rlmpc-testbed" class="level1">
+<h1>Safe RL/MPC Testbed</h1>
+<blockquote class="blockquote">
+<p>로봇의 변화 가능한 환경에서의 MPC, RL의 안정성 평가 Testbad 정의</p>
+</blockquote>
+<ul>
+<li>SafeRL/MPC라고 하면, 어떤 환경에서 안정성을 평가하는 것이 합리적인가</li>
+<li>로봇에 요구되는 Task가 다양해짐에 따라 평가할 수 있는 적절한 Testbed 및 기준 필요</li>
+<li>환경변화로 “로봇 외부의 환경 변화”, “범용적 임무 수행을 위한 로봇의 동작으로 인해 발생된 환경 변화”, “로봇의 조정 가능한 HW, 부착물의 위치, 구성으로 인해 발생된 환경 변화”를 생각해볼 수 있음</li>
+</ul>
+<p><img src="../../images/2025-02-18-papers/round1-pcw.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -188,18 +278,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -231,7 +310,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -239,7 +340,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

@@ -1,10 +1,63 @@
 ---
-title: "3 minitues paper"
+title: "3mins papers"
 description: 1 round
 date: "2025-02-18"
-categories: [paper]
+categories: [paper, 3mins]
 toc: true
-draft: true
+image: ../../images/3mins.png
 ---
 
-TBD
+# DreamFLEX
+> Learning Fault-Aware Quadrupedal Locomotion  Controller for Anomaly Situation in Rough Terrains
+
+- 로봇이 실제 오래 구동했을 시에 마주칠 수 있는 하드웨어 결함에 대응하는 방법론, joint의 결함이 생기면 이를 감지하여 결함이 있는 상황에 맞춰서 보행 패턴을 재구성
+- DreamWaQ의 컨셉을 유지하며 CENet을 FEMNet으로 바꾸어 조인트 결함을 감지하는 것과 연관있는 term $f_t$ 추가
+- Joint Fault의 상황은 `locked joint와 `weakened motor` 2가지 경우에 대해 상황을 정의하여 결함이 있는 발을 제외하고서라도 보행하는 것이 목적
+- [Paper Link](https://arxiv.org/abs/2502.05817)
+
+![](../../images/2025-02-18-papers/dreamflex.jpg)
+
+
+
+# RL-augmented MPC
+
+>  Learning Agile Locomotion and Adaptive Behaviors via RL-augmented MPC
+
+- RL을 보완하는 MPC 프레임워크 개발
+  고속 이동, 모델 불확실성 적응, 장애물 회피를 포함하는 적응형 블라인드(blind) 보행을 실현
+- 스탠스 발 힘 제어(stance foot force control)와 스윙 발 반사(swing foot reflection)를 결합
+  기존 MPC가 직면한 스윙 발 궤적의 불확실성 문제를 해결
+  모델 불확실성(model uncertainty)에 적응하면서 로봇의 균형 유지 능력을 개선
+- 로봇-독립적(robot-agnostic) RL 모듈 도입
+  다양한 로봇 플랫폼(Unitree A1, Go1, AlienGo)에서 zero-shot transfer 가능
+  RL 정책이 특정 로봇에 최적화되지 않고 다양한 환경에서도 일반화 가능
+
+- stance phase와 swing phase를 분리하는 것은 당연한 전제로 생각했었는데, 이를 혼합하려는 시도는 신선하게 느껴짐
+- [Paper Link](https://arxiv.org/abs/2310.09442) 
+
+![](../../images/2025-02-18-papers/rl-aug-mpc.jpeg)
+
+# CAIMAN
+
+>  Causal Action Influence Detection for Sample Efficient Loco-manipulation
+
+- 4족보행 로봇이 크고 무거운 물체를 조작하며 이동할 수 있도록 비-파지(non-prehensile) 방식으로 크고 무거운 물체를 조작하며 이동(loco-manipulation)하는 Task를 학습
+- causal action influence(인과적 행동 영향, CAI)을 활용하여 로봇이 환경을 제어하는 상태를 탐지하고, 이를 내재적 동기(intrinsically motivated objective)로 삼아 hierarchical control strategy을 통해 학습
+- 물체를 미는 물리적 결과에 대한 동역학 모델을 학습하여 CAI 값을 끌어낸다는 점이 특이해서 흥미로웠으며, 최근에 Loco-Manipulation이라고 하면 보통 매니퓰레이터를 간단한거라도 다는데 여기에서는 그냥 밀기였음
+- [Paper Link](https://arxiv.org/abs/2502.00835)
+
+![](../../images/2025-02-18-papers/caiman.png)
+
+
+
+# Safe RL/MPC Testbed
+
+> 로봇의 변화 가능한 환경에서의 MPC, RL의 안정성 평가 Testbad 정의
+
+- SafeRL/MPC라고 하면, 어떤 환경에서 안정성을 평가하는 것이 합리적인가
+- 로봇에 요구되는 Task가 다양해짐에 따라 평가할 수 있는 적절한 Testbed 및 기준 필요
+- 환경변화로 "로봇 외부의 환경 변화", "범용적 임무 수행을 위한 로봇의 동작으로 인해 발생된 환경 변화", "로봇의 조정 가능한 HW, 부착물의 위치, 구성으로 인해 발생된 환경 변화"를 생각해볼 수 있음
+
+
+
+![](../../images/2025-02-18-papers/round1-pcw.png)
