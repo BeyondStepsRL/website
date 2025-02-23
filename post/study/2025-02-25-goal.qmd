@@ -1,0 +1,18 @@
+---
+title: "Research Goal"
+description: The list of Conferences/Journals
+date: "2025-02-25"
+categories: [goal]
+image: ../../images/goal.jpg
+toc: true
+---
+
+> 목표로 제출하고자 하는 학회나 저널 제출기간 확인
+
+# CORL 
+
+[https://www.corl.org/home](https://www.corl.org/home)
+
+![](../../images/2025-02-25-conferences/image-20250223094733838.png)
+
+# ICRA

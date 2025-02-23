@@ -1,6 +1,6 @@
 ---
-title: "3mins papers"
-description: 1 round
+title: "1️⃣ 3mins papers"
+description: "DreamFLEX/RL-augmented MPC/CAIMAN/Safe RL/MPC Testbed"
 date: "2025-02-18"
 categories: [paper, 3mins]
 toc: true

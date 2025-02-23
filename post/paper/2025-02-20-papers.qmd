@@ -1,6 +1,6 @@
 ---
-title: "3mins papers"
-description: 2 round
+title: "2️⃣ 3mins papers"
+description: "Actor-Cross-Critic/ANYmal Parkour/Stiffness Tuning/Privileged Information"
 date: "2025-02-20"
 categories: [paper, 3mins]
 toc: true

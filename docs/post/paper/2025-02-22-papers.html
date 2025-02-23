@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-20">
-<meta name="description" content="Actor-Cross-Critic/ANYmal Parkour/Stiffness Tuning/Privileged Information">
+<meta name="dcterms.date" content="2025-02-22">
+<meta name="description" content="Hybrid Internal Model/Locomotion over Challenging Terrain/Extreme Parkour/Differentiable Simulation">
 
-<title>2️⃣ 3mins papers – BSRL</title>
+<title>3️⃣ 3mins papers – BSRL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,10 +114,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#actor-cross-critic" id="toc-actor-cross-critic" class="nav-link active" data-scroll-target="#actor-cross-critic">Actor-Cross-Critic</a></li>
-  <li><a href="#anymal-parkour" id="toc-anymal-parkour" class="nav-link" data-scroll-target="#anymal-parkour">ANYmal Parkour</a></li>
-  <li><a href="#stiffness-tuning" id="toc-stiffness-tuning" class="nav-link" data-scroll-target="#stiffness-tuning">Stiffness Tuning</a></li>
-  <li><a href="#privileged-information" id="toc-privileged-information" class="nav-link" data-scroll-target="#privileged-information">Privileged Information</a></li>
+  <li><a href="#hybrid-internal-model" id="toc-hybrid-internal-model" class="nav-link active" data-scroll-target="#hybrid-internal-model">Hybrid Internal Model</a></li>
+  <li><a href="#learning-quadrupedal-locomotion-over-challenging-terrain" id="toc-learning-quadrupedal-locomotion-over-challenging-terrain" class="nav-link" data-scroll-target="#learning-quadrupedal-locomotion-over-challenging-terrain">Learning Quadrupedal Locomotion over Challenging Terrain</a></li>
+  <li><a href="#extreme-parkour-with-legged-robots" id="toc-extreme-parkour-with-legged-robots" class="nav-link" data-scroll-target="#extreme-parkour-with-legged-robots">Extreme Parkour with Legged Robots</a></li>
+  <li><a href="#learning-quadruped-locomotion-using-differentiable-simulation" id="toc-learning-quadruped-locomotion-using-differentiable-simulation" class="nav-link" data-scroll-target="#learning-quadruped-locomotion-using-differentiable-simulation">Learning Quadruped Locomotion Using Differentiable Simulation</a></li>
   </ul>
 </nav>
     </div>
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">2️⃣ 3mins papers</h1>
+<h1 class="title">3️⃣ 3mins papers</h1>
   <div class="quarto-categories">
     <div class="quarto-category">paper</div>
     <div class="quarto-category">3mins</div>
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Actor-Cross-Critic/ANYmal Parkour/Stiffness Tuning/Privileged Information
+    Hybrid Internal Model/Locomotion over Challenging Terrain/Extreme Parkour/Differentiable Simulation
   </div>
 </div>
 
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 20, 2025</p>
+      <p class="date">February 22, 2025</p>
     </div>
   </div>
   
@@ -158,59 +158,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="actor-cross-critic" class="level1">
-<h1>Actor-Cross-Critic</h1>
+<section id="hybrid-internal-model" class="level1">
+<h1>Hybrid Internal Model</h1>
 <blockquote class="blockquote">
-<p>Leveraging Privileged Information for Partially Observable Reinforcement Learning</p>
+<p>Learning Agile Legged Locomotion with Simulated Robot Response</p>
 </blockquote>
 <ul>
-<li>VAE 등을 사용하는 방법들은 간접적인 정보 제공을 하기 때문에 Asymmetric Actor Critic 구조의 문제를 해결해야 함</li>
-<li>두개의 Critic 네트워크들을 학습하고 Advantage가 더 큰 값을 선택하여 Actor에게 제공하는 방법. Oracle Critic과 Executor Critic 2개의 네트워크를 가지고 Overestimation 문제를 방지</li>
-<li>이러한 ACC의 학습 과정이 기존의 Actor Critic 방법보다 더 안정적이고 빠르게 수렴함을 증명</li>
-<li><a href="https://ieeexplore.ieee.org/document/10887124">Paper Link</a></li>
+<li>Contrasive Learning(SwaV 기반)을 통해 Latent vector 생성. Positive Pair와 Negative Pair를 분류하여 비슷한 환경에서는 Latent vector들이 비슷한 값을 갖도록, 다른 환경에서는 다른 표현을 갖도록 하는 클러스터링 방법을 사용하여 Latent vector space 공간을 구성하도록 함.</li>
+<li>직접적으로 환경 정보를 예측하지 않고 간접적으로 proprioceptive data를 기반으로 지형에 대응하는 방법임</li>
+<li>코드가 공개되어 있고 성능이 좋아보이며, 지형에 따라 Latent가 구분되는 것을 확인할 수 있으며 DreamWaQ보다 뚜렷하게 구분되는 특징을 확인할 수 있음</li>
+<li><a href="https://arxiv.org/abs/2312.11460">Paper Link</a></li>
+<li><a href="https://github.com/OpenRobotLab/HIMLoco">Code</a></li>
 </ul>
-<p><img src="../../images/2025-02-20-papers/acc.png" class="img-fluid"></p>
+<p><img src="../../images/2025-02-22-papers/him.png" class="img-fluid"></p>
 </section>
-<section id="anymal-parkour" class="level1">
-<h1>ANYmal Parkour</h1>
-<blockquote class="blockquote">
-<p>Learning Agile Navigation forQuadrupedal Robots</p>
-</blockquote>
+<section id="learning-quadrupedal-locomotion-over-challenging-terrain" class="level1">
+<h1>Learning Quadrupedal Locomotion over Challenging Terrain</h1>
 <ul>
-<li>완전 학습 기반(fully learned) 네비게이션: 환경의 3D 재구성 정보를 활용하여 보행 기술을 동적으로 선택.</li>
-<li>하이브리드 정책 구조: PPO 기반으로 Gaussian 분포(저수준 명령) + 범주형 분포(기술 선택)를 결합.</li>
-<li>새로운 보행 기술 학습: 점프, 등반, 웅크리기 등 다양한 역동적 동작을 학습하여 높은 장애물도 극복 가능.</li>
-<li>신경망 기반 3D 환경 재구성: 다중 해상도 맵핑을 통해 로봇 주변은 고해상도로, 멀리 있는 환경은 저해상도로 인식하여 실시간 처리 성능을 확보.</li>
-<li>지금까지 연구해온 연구 내용들을 총망라하여 perception 부터 agile한 control까지 가능하게 만드는 시스템을 구축한 느낌을 받음</li>
-<li><a href="https://arxiv.org/abs/2306.14874">Paper Link</a></li>
+<li>정말 유명한 논문임. 극도로 강건한 보행 컨트롤러 설계를 위해 proprioceptive (고유수용성 - 내계 정보 = joint encoder, IMU, etc) 만을 사용해 사족보행 로봇의 진흙, deformable terrain, 자갈, 동적인 장판, 식생, 거센 물살에서도 동작하게 만들 수 있음. 더 단순한 도메인에서 학습을 수행해도, 실제 자연 환경에서의 강건함을 극대화 할 수 있음.</li>
+<li>구현을 위해 교사 정책을 학습하였음. 시뮬레이션에서 지면의 정확한 높이, 경사도, 접촉 상태와 같은 특권 (privileged) 정보를 활용하여 정책을 학습하고, 실제 로봇에서는 student policy를 사용하여 고유수용성 데이터만을 입력으로 사용하는 학생 정책을 학습함.</li>
+<li>지난 논문인 <a href="https://beyondstepsrl.github.io/website/post/paper/2025-02-20-papers.html#privileged-information"><code>Provable Partially Observable Reinforcement Learning with Privileged Information</code></a>와 연결해 보면, 결국 이렇게 학습을 해서 동작을 하는 이유는, ’특권 정보’의 활용이 결정론적 필터 조건 (Deterministic Filter Condition) 조건을 만족하지 않더라도, 일부 제약 조건을 만족할 수 있다는 뜻으로 해석될 수 있음. 적절한 constraint 를 걸어서 lower bound를 만든다면, safe condition (constraint)를 만족할 수 있는 강화학습 보행 컨트롤러를 만들수 있지 않을까 생각됩니다.</li>
+<li><a href="https://arxiv.org/abs/2010.11251">Paper Link</a></li>
 </ul>
-<p><img src="../../images/2025-02-20-papers/anymal-parkour.png" class="img-fluid"></p>
+<p><img src="../../images/2025-02-22-papers/image-20250223100953289.png" class="img-fluid"></p>
 </section>
-<section id="stiffness-tuning" class="level1">
-<h1>Stiffness Tuning</h1>
-<blockquote class="blockquote">
-<p>Variable Stiffness for Robust Locomotion through Reinforcement Learning</p>
-</blockquote>
+<section id="extreme-parkour-with-legged-robots" class="level1">
+<h1>Extreme Parkour with Legged Robots</h1>
 <ul>
-<li>강화학습 보행 제어에서, joint stiffness 튜닝 없이도 성능을 유지하면서 변수 stiffness p gain을 action space에 통합하는 새로운 제어 패러다임을 제안.</li>
-<li>stiffness을 관절별(PJS), 다리별(PLS), 하이브리드(HJLS)로 그룹화하여 제어하는 방식을 적용하여 PLS는 속도 추적 및 외력 대응에서 우수하며, HJLS는 에너지 효율성을 극대화하는 결과를 보여줌</li>
-<li>Pd 튜닝 중 d 게인은 p 게인에 의존 변수로 놓았고 기존의 action space 디자인을 색다르게 했다는 점에서 참신한 것 같음. 강화학습 보행제어에서 관습적으로 하는 부분을 건드렸다는 측면에서 새로웠음.</li>
-<li><a href="https://arxiv.org/abs/2502.09436">Paper link</a></li>
+<li>저비용의 센서(depth 카메라 한개)와 저렴한 사족보행로봇(actuation이 부정확함)을 활용하여 매우 뛰어난 수준의 파쿠르 동작을 수행하는 모델을 만드는 방법에 대해서 소개하는 논문임.</li>
+<li>이는 기존의 파쿠르와 같은 동작을 수행하는 논문들보다 훨씬 간단하면서도 저비용으로 실현할 수 있음을 증명했다. <code>ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots</code>의 경우 구현을 하기 위해서는 mapping module 따로, planning module따로, control module 따로 필요했었지만, 이 방식은 하나의 네트워트만 학습시켜주면 된다. 이때 학습 기법은 위 이미지와 같이 privileged information을 통해 완성도 있는 teacher 모델을 만들고, 이를 Dual Distillation 학습 기법을 통하여 student 모델을 만든다. (phase 1: 전문가 데이터를 활용한 지도학습 / Phase 2: 지도 데이터 없이 로봇이 스스로 방향을 예측하며 학습)</li>
+<li>영상을 확인한 후, 학습이 매우 잘 이루어졌으며 sim-to-real 전이도 성공적으로 수행되었음을 알 수 있었다. 그러나 이러한 방식으로 학습된 네트워크가 충분히 안전한지에 대해서는 다소 의문이 든다. 특히, 좌우 및 후방에 대한 정보 없이 높은 속도로 전진하는 네트워크는 예상치 못한 위험을 초래할 가능성이 있어 보인다. 또한, 이전 연구에서는 상단 장애물까지 고려하여 로봇이 몸을 숙이는 동작을 학습하는 등 더 다양한 정보를 활용하여 성능을 향상시켰다. 따라서 단순히 저비용 네트워크를 구축하는 것이 반드시 최선의 방법이라고는 생각되지 않는다. 비용 절감도 중요하지만, 보다 풍부한 센서 정보를 활용하여 안전성과 전반적인 성능을 극대화하는 접근이 더 바람직할 것으로 보인다.</li>
+<li><a href="https://arxiv.org/pdf/2309.14341">Paper Link</a></li>
+<li><a href="https://www.youtube.com/watch?v=cqvAgcQl6s4&amp;t=82s">Video</a></li>
 </ul>
-<p><img src="../../images/2025-02-20-papers/stiffness-tuning.jpeg" class="img-fluid"></p>
+<p><img src="../../images/2025-02-22-papers/image-20250223131734317.png" class="img-fluid"></p>
 </section>
-<section id="privileged-information" class="level1">
-<h1>Privileged Information</h1>
-<blockquote class="blockquote">
-<p>Provable Partially Observable Reinforcement Learning with Privileged Information</p>
-</blockquote>
+<section id="learning-quadruped-locomotion-using-differentiable-simulation" class="level1">
+<h1>Learning Quadruped Locomotion Using Differentiable Simulation</h1>
 <ul>
-<li>강화학습은 무조건 적으로 Partially Observable MDP (POMDP) 환경이며, 학습 단계에서 시뮬레이션에서만 얻을 수 있는 노이즈가 없는 깨끗한 데이터인 특권 정보 (Privileged Information) 이 존재함. 예를 들어 노이즈가 없는 완전한 상태 정보를 이용하면 정책을 학습하는데 도움이 되며, 실제 실행에서는 전문가 증류 (expert distillation) 과 비대칭 액터-크리틱 (훈련과 실행 단계에서 다른 관찰값을 사용하는 방식 - 크리틱은 특권 정보를 활용하여 평가, 액터는 제한된 관찰값만을 사용)을 이용하여 현실 데이터에 적용함.</li>
-<li>최근 증류 기법이 여러 학습에서 매우 뛰어난 성능을 보이고 있음. 그러나 최근 적용되고 있는 증류기법은 항상 최적 정책을 보장하지 않으며, 근사 최적 정책을 학습하는 과정에서 손실이 발생함. 저자들은 POMDP에서 관찰값을 통해 현재의 진짜 상태 (state)를 결정할 수 있는 조건을 만족하는지에 대한 여부를 결정론적 필터 조건 (Deterministic Filter Condition)으로 정의함. 이 조건, 즉 필터가 결정론적일 경우에 (관찰값이 주어지면 현재 상태를 정확하게 추론이 가능할 때), 전문가 증류의 손실을 방지할 수 있음. 예시로, 로봇 손을 이용한 물체 조작은 (조건: 로봇이 손에 있는 물체의 위치와 방향을 정확히 측정할 수 있다면, 결과: 관찰을 통해 물체의 실제 상태를 결정할 수 있음) 이 조건을 만족함. 자율 주행 차량에서는 (조건: 도로의 미끄러움 정도는 차량 센서로 알 수 없음. 결과: 센서값이 동일해도 도로의 미끄러움 정도는 달라질 수 있음) 이 조건을 만족하지 않음.</li>
-<li>이 논문은 NIPS 논문이며, 수식적 증명이 들어가는 논문으로 72 페이지의 분량을 가지고 있네요. 리뷰어들이 고생을 많이 했겠습니다.. 이 논문의 아이디어를 차용해 보자면, 증류 및 비대칭 액터-크리틱은 적용할 수 있겠습니다. 다만, 사족보행 로봇은 이 ’결정론적 필터 조건’이 충족되지 않을 조건을 너무 많이 가지고 있기에, 이 논문의 아이디어를 적용해 보려면 적당한 assumption을 통해서 lower bound를 찾아내어 적용해 보는 것도 재미있겠다는 생각이 드네요</li>
-<li><a href="https://arxiv.org/abs/2412.00985">Paper Link</a></li>
+<li>효율적인 역전파를 위해 단순한 surrogate dynamics model에서 얻은 smooth gradients와 정확한 forward simulation을 위해 non-differentiable 시뮬레이터의 high fidelity을 결합한 새로운 정책학습 방식 제안</li>
+<li>non-differentiable인 IsaacGym 시뮬레이터는 복잡한 contact 동역학을 시뮬레이션할 수 있으며, 이를 활용하여 단순화된 rigid-body dynamics model의 상태(state)를 정렬(align)함으로써, training pipeline이 실제 동역학에 기반을 두도록 보장</li>
+<li>Differential simulator를 따로 개발하는 움직임(<a href="https://arxiv.org/abs/2106.13281">brax</a>)도 있는데 differential loss term을 추가해서 non-differential simulator를 보완하는 방식이 새로웠으며 PPO보다 적은 agent수로도 학습 reward가 빠르게 maximization된다는 점이 놀라웠음</li>
+<li><a href="https://arxiv.org/abs/2403.14864">Paper Link</a></li>
 </ul>
-<p><img src="../../images/2025-02-20-papers/provable.png" class="img-fluid"></p>
+<p><img src="../../images/2025-02-22-papers/image-20250223131803001.png" class="img-fluid"></p>
 
 
 </section>
