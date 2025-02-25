@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-22">
-<meta name="description" content="Hybrid Internal Model/Locomotion over Challenging Terrain/Extreme Parkour/Differentiable Simulation">
+<meta name="dcterms.date" content="2025-02-24">
+<meta name="description" content="/ / /MI-HGNN">
 
 <title>BSRL - 3️⃣ 3mins papers</title>
 <style>
@@ -114,10 +114,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hybrid-internal-model" id="toc-hybrid-internal-model" class="nav-link active" data-scroll-target="#hybrid-internal-model">Hybrid Internal Model</a></li>
-  <li><a href="#learning-quadrupedal-locomotion-over-challenging-terrain" id="toc-learning-quadrupedal-locomotion-over-challenging-terrain" class="nav-link" data-scroll-target="#learning-quadrupedal-locomotion-over-challenging-terrain">Learning Quadrupedal Locomotion over Challenging Terrain</a></li>
-  <li><a href="#extreme-parkour-with-legged-robots" id="toc-extreme-parkour-with-legged-robots" class="nav-link" data-scroll-target="#extreme-parkour-with-legged-robots">Extreme Parkour with Legged Robots</a></li>
-  <li><a href="#learning-quadruped-locomotion-using-differentiable-simulation" id="toc-learning-quadruped-locomotion-using-differentiable-simulation" class="nav-link" data-scroll-target="#learning-quadruped-locomotion-using-differentiable-simulation">Learning Quadruped Locomotion Using Differentiable Simulation</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#paper-3" id="toc-paper-3" class="nav-link" data-scroll-target="#paper-3">paper 3</a></li>
+  <li><a href="#mi-hgnn" id="toc-mi-hgnn" class="nav-link" data-scroll-target="#mi-hgnn">MI-HGNN</a></li>
   </ul>
 </nav>
     </div>
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Hybrid Internal Model/Locomotion over Challenging Terrain/Extreme Parkour/Differentiable Simulation
+    / / /MI-HGNN
   </div>
 </div>
 
@@ -146,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 22, 2025</p>
+      <p class="date">February 24, 2025</p>
     </div>
   </div>
   
@@ -158,50 +158,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="hybrid-internal-model" class="level1">
-<h1>Hybrid Internal Model</h1>
+<section id="section" class="level1">
+<h1></h1>
 <blockquote class="blockquote">
-<p>Learning Agile Legged Locomotion with Simulated Robot Response</p>
+
 </blockquote>
 <ul>
-<li>Contrasive Learning(SwaV 기반)을 통해 Latent vector 생성. Positive Pair와 Negative Pair를 분류하여 비슷한 환경에서는 Latent vector들이 비슷한 값을 갖도록, 다른 환경에서는 다른 표현을 갖도록 하는 클러스터링 방법을 사용하여 Latent vector space 공간을 구성하도록 함.</li>
-<li>직접적으로 환경 정보를 예측하지 않고 간접적으로 proprioceptive data를 기반으로 지형에 대응하는 방법임</li>
-<li>코드가 공개되어 있고 성능이 좋아보이며, 지형에 따라 Latent가 구분되는 것을 확인할 수 있으며 DreamWaQ보다 뚜렷하게 구분되는 특징을 확인할 수 있음</li>
-<li><a href="https://arxiv.org/abs/2312.11460">Paper Link</a></li>
-<li><a href="https://github.com/OpenRobotLab/HIMLoco">Code</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li><a href="">Paper Link</a></li>
+<li><a href="">Code</a></li>
 </ul>
-<p><img src="../../images/2025-02-22-papers/him.png" class="img-fluid"></p>
 </section>
-<section id="learning-quadrupedal-locomotion-over-challenging-terrain" class="level1">
-<h1>Learning Quadrupedal Locomotion over Challenging Terrain</h1>
+<section id="section-1" class="level1">
+<h1></h1>
+<blockquote class="blockquote">
+
+</blockquote>
 <ul>
-<li>정말 유명한 논문임. 극도로 강건한 보행 컨트롤러 설계를 위해 proprioceptive (고유수용성 - 내계 정보 = joint encoder, IMU, etc) 만을 사용해 사족보행 로봇의 진흙, deformable terrain, 자갈, 동적인 장판, 식생, 거센 물살에서도 동작하게 만들 수 있음. 더 단순한 도메인에서 학습을 수행해도, 실제 자연 환경에서의 강건함을 극대화 할 수 있음.</li>
-<li>구현을 위해 교사 정책을 학습하였음. 시뮬레이션에서 지면의 정확한 높이, 경사도, 접촉 상태와 같은 특권 (privileged) 정보를 활용하여 정책을 학습하고, 실제 로봇에서는 student policy를 사용하여 고유수용성 데이터만을 입력으로 사용하는 학생 정책을 학습함.</li>
-<li>지난 논문인 <a href="https://beyondstepsrl.github.io/website/post/paper/2025-02-20-papers.html#privileged-information"><code>Provable Partially Observable Reinforcement Learning with Privileged Information</code></a>와 연결해 보면, 결국 이렇게 학습을 해서 동작을 하는 이유는, ’특권 정보’의 활용이 결정론적 필터 조건 (Deterministic Filter Condition) 조건을 만족하지 않더라도, 일부 제약 조건을 만족할 수 있다는 뜻으로 해석될 수 있음. 적절한 constraint 를 걸어서 lower bound를 만든다면, safe condition (constraint)를 만족할 수 있는 강화학습 보행 컨트롤러를 만들수 있지 않을까 생각됩니다.</li>
-<li><a href="https://arxiv.org/abs/2010.11251">Paper Link</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li><a href="">Paper Link</a></li>
+<li><a href="">Code</a></li>
 </ul>
-<p><img src="../../images/2025-02-22-papers/image-20250223100953289.png" class="img-fluid"></p>
 </section>
-<section id="extreme-parkour-with-legged-robots" class="level1">
-<h1>Extreme Parkour with Legged Robots</h1>
+<section id="paper-3" class="level1">
+<h1>paper 3</h1>
+<blockquote class="blockquote">
+
+</blockquote>
 <ul>
-<li>저비용의 센서(depth 카메라 한개)와 저렴한 사족보행로봇(actuation이 부정확함)을 활용하여 매우 뛰어난 수준의 파쿠르 동작을 수행하는 모델을 만드는 방법에 대해서 소개하는 논문임.</li>
-<li>이는 기존의 파쿠르와 같은 동작을 수행하는 논문들보다 훨씬 간단하면서도 저비용으로 실현할 수 있음을 증명했다. <code>ANYmal Parkour: Learning Agile Navigation for Quadrupedal Robots</code>의 경우 구현을 하기 위해서는 mapping module 따로, planning module따로, control module 따로 필요했었지만, 이 방식은 하나의 네트워트만 학습시켜주면 된다. 이때 학습 기법은 위 이미지와 같이 privileged information을 통해 완성도 있는 teacher 모델을 만들고, 이를 Dual Distillation 학습 기법을 통하여 student 모델을 만든다. (phase 1: 전문가 데이터를 활용한 지도학습 / Phase 2: 지도 데이터 없이 로봇이 스스로 방향을 예측하며 학습)</li>
-<li>영상을 확인한 후, 학습이 매우 잘 이루어졌으며 sim-to-real 전이도 성공적으로 수행되었음을 알 수 있었다. 그러나 이러한 방식으로 학습된 네트워크가 충분히 안전한지에 대해서는 다소 의문이 든다. 특히, 좌우 및 후방에 대한 정보 없이 높은 속도로 전진하는 네트워크는 예상치 못한 위험을 초래할 가능성이 있어 보인다. 또한, 이전 연구에서는 상단 장애물까지 고려하여 로봇이 몸을 숙이는 동작을 학습하는 등 더 다양한 정보를 활용하여 성능을 향상시켰다. 따라서 단순히 저비용 네트워크를 구축하는 것이 반드시 최선의 방법이라고는 생각되지 않는다. 비용 절감도 중요하지만, 보다 풍부한 센서 정보를 활용하여 안전성과 전반적인 성능을 극대화하는 접근이 더 바람직할 것으로 보인다.</li>
-<li><a href="https://arxiv.org/pdf/2309.14341">Paper Link</a></li>
-<li><a href="https://www.youtube.com/watch?v=cqvAgcQl6s4&amp;t=82s">Video</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li><a href="">Paper Link</a></li>
+<li><a href="">Code</a></li>
 </ul>
-<p><img src="../../images/2025-02-22-papers/image-20250223131734317.png" class="img-fluid"></p>
 </section>
-<section id="learning-quadruped-locomotion-using-differentiable-simulation" class="level1">
-<h1>Learning Quadruped Locomotion Using Differentiable Simulation</h1>
+<section id="mi-hgnn" class="level1">
+<h1>MI-HGNN</h1>
+<blockquote class="blockquote">
+<p>Morphology-Informed Heterogeneous Graph Neural Network for Legged Robot Contact Perception</p>
+</blockquote>
 <ul>
-<li>효율적인 역전파를 위해 단순한 surrogate dynamics model에서 얻은 smooth gradients와 정확한 forward simulation을 위해 non-differentiable 시뮬레이터의 high fidelity을 결합한 새로운 정책학습 방식 제안</li>
-<li>non-differentiable인 IsaacGym 시뮬레이터는 복잡한 contact 동역학을 시뮬레이션할 수 있으며, 이를 활용하여 단순화된 rigid-body dynamics model의 상태(state)를 정렬(align)함으로써, training pipeline이 실제 동역학에 기반을 두도록 보장</li>
-<li>Differential simulator를 따로 개발하는 움직임(<a href="https://arxiv.org/abs/2106.13281">brax</a>)도 있는데 differential loss term을 추가해서 non-differential simulator를 보완하는 방식이 새로웠으며 PPO보다 적은 agent수로도 학습 reward가 빠르게 maximization된다는 점이 놀라웠음</li>
-<li><a href="https://arxiv.org/abs/2403.14864">Paper Link</a></li>
+<li>MI-HGNN은 로봇의 관절과 링크를 각각 노드와 엣지로 모델링하여, 기존 모델 대비 8.4% 성능 향상과 탁월한 파라미터 효율성, 일반화 및 샘플 효율성을 달성함</li>
+<li>로봇의 형태학(morphology) 정보를 반영한 이종 그래프 신경망(Heterogeneous Graph Neural Network) 아키텍처에 모델 기반 제약을 통합하여, 실제와 시뮬레이션 데이터에서 접촉 인식 문제를 효과적으로 해결</li>
+<li>이전에 미니 프로젝트로 했었던 GNN 아이디어는 단순히 보행하는 rl policy에 간접적인 정보를 넣어주는 걸로 진행했었는데 이 논문에서 GNN은 보다 직접적으로 ground reaction forces (GRFs)를 예측하는 학습을 시켰다는 점이 새로웠으며 제어하는데 GRF 정보가 필요할 때 한 모듈로 이용해보면 좋겠다는 생각이 들었음</li>
+<li><a href="https://arxiv.org/abs/2409.11146">Paper Link</a></li>
 </ul>
-<p><img src="../../images/2025-02-22-papers/image-20250223131803001.png" class="img-fluid"></p>
+<p><img src="../../images/2025-02-24-papers/1740486399083.png" class="img-fluid"></p>
 
 
 </section>

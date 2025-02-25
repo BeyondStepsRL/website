@@ -1,0 +1,48 @@
+---
+title: "3️⃣ 3mins papers"
+description: " / / /MI-HGNN"
+date: "2025-02-24"
+categories: [paper, 3mins]
+toc: true
+image: ../../images/3mins.png
+---
+
+# 
+> 
+
+- 
+- 
+- 
+- [Paper Link]()
+- [Code]()
+
+
+# 
+> 
+
+- 
+- 
+- 
+- [Paper Link]()
+- [Code]()
+
+
+# paper 3
+> 
+
+- 
+- 
+- 
+- [Paper Link]()
+- [Code]()
+
+
+# MI-HGNN
+> Morphology-Informed Heterogeneous Graph Neural Network for Legged Robot Contact Perception
+
+- MI-HGNN은 로봇의 관절과 링크를 각각 노드와 엣지로 모델링하여, 기존 모델 대비 8.4% 성능 향상과 탁월한 파라미터 효율성, 일반화 및 샘플 효율성을 달성함
+- 로봇의 형태학(morphology) 정보를 반영한 이종 그래프 신경망(Heterogeneous Graph Neural Network) 아키텍처에 모델 기반 제약을 통합하여, 실제와 시뮬레이션 데이터에서 접촉 인식 문제를 효과적으로 해결
+- 이전에 미니 프로젝트로 했었던 GNN 아이디어는 단순히 보행하는 rl policy에 간접적인 정보를 넣어주는 걸로 진행했었는데 이 논문에서 GNN은 보다 직접적으로 ground reaction forces (GRFs)를 예측하는 학습을 시켰다는 점이 새로웠으며 제어하는데 GRF 정보가 필요할 때 한 모듈로 이용해보면 좋겠다는 생각이 들었음
+- [Paper Link](https://arxiv.org/abs/2409.11146)
+
+![](../../images/2025-02-24-papers/1740486399083.png)
