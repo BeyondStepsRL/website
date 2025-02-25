@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-02-24">
 <meta name="description" content="/ / Small Home Robot /MI-HGNN">
 
-<title>3️⃣ 3mins papers – BSRL</title>
+<title>BSRL - 3️⃣ 3mins papers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a81921e66b7d5878059d6e60734667ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#rloc-terrain-aware-legged-locomotion-using-reinforcement-learning-and-optimal-control" id="toc-rloc-terrain-aware-legged-locomotion-using-reinforcement-learning-and-optimal-control" class="nav-link" data-scroll-target="#rloc-terrain-aware-legged-locomotion-using-reinforcement-learning-and-optimal-control">RLOC: Terrain-Aware Legged Locomotion using Reinforcement Learning and Optimal Control</a></li>
   <li><a href="#small-home-robot" id="toc-small-home-robot" class="nav-link" data-scroll-target="#small-home-robot">Small Home Robot</a></li>
   <li><a href="#mi-hgnn" id="toc-mi-hgnn" class="nav-link" data-scroll-target="#mi-hgnn">MI-HGNN</a></li>
   </ul>
@@ -171,17 +171,16 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="">Code</a></li>
 </ul>
 </section>
-<section id="section-1" class="level1">
-<h1></h1>
+<section id="rloc-terrain-aware-legged-locomotion-using-reinforcement-learning-and-optimal-control" class="level1">
+<h1>RLOC: Terrain-Aware Legged Locomotion using Reinforcement Learning and Optimal Control</h1>
 <blockquote class="blockquote">
-
+<p>2020년 논문이지만, 계속해서 Privileged Information 컨셉을 유지하면서, 관련 논문을 찾고 있습니다. - 이 논문은 강화학습(RL)과 모델 기반 제어를 통합하여 사족보행 로봇이 다양한 지형에서 동적 보행을 수행할 수 있도록 하는 프레임워크를 제안합니다. 이 접근법은 온보드 고유수용성(proprioceptive) 및 외부수용성(exteroceptive) 피드백을 활용하여 센서 정보와 원하는 속도 명령을 발걸음 계획으로 매핑하는 RL 정책을 학습합니다. 학습된 정책은 모델 기반 모션 컨트롤러와 결합되어 복잡한 지형에서도 안정적인 보행을 구현합니다. 또한, 신체 전체의 움직임 추적 및 회복 제어를 위한 보조 RL 정책을 도입하여 물리적 파라미터의 변화와 외부 교란에 대응합니다. 이 프레임워크는 ANYmal B 및 ANYmal C 로봇 플랫폼에서 재학습 없이도 성공적으로 적용되었습니다.</p>
 </blockquote>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li><a href="">Paper Link</a></li>
-<li><a href="">Code</a></li>
+<li><p>이 논문은 “Provable Partially Observable Reinforcement Learning with Privileged Information” 연구와 연결 지어 해석할 수 있습니다. 특히, 시뮬레이션에서 특권 정보(privileged information)를 활용하여 RL 정책을 학습하고, 실제 환경에서는 제한된 센서 정보만으로도 안정적인 보행을 구현하는 접근법은 두 연구의 공통된 특징입니다. 이는 특권 정보의 활용이 결정론적 필터 조건(deterministic filter condition)을 만족하지 않더라도, 적절한 제약 조건을 통해 안전한 강화학습 기반 보행 컨트롤러를 설계할 수 있음을 시사합니다.</p></li>
+<li><p>이러한 통찰을 바탕으로, 특권 정보를 활용한 교사-학생 학습(teaching-student learning)과 비대칭 액터-크리틱(asymmetric actor-critic) 방법을 통해 사족보행 로봇의 복잡한 지형에서의 안전한 보행을 구현할 수 있습니다. 또한, 적절한 제약 조건을 도입하여 강화학습 기반 보행 컨트롤러의 안정성과 안전성을 향상시킬 수 있을 것으로 기대됩니다.</p></li>
+<li><p><a href="https://arxiv.org/abs/2012.03094">Paper Link</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=GTI-0gl6Hg0">Video</a></p></li>
 </ul>
 </section>
 <section id="small-home-robot" class="level1">
@@ -250,7 +249,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -282,27 +292,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -310,7 +300,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -407,6 +397,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
