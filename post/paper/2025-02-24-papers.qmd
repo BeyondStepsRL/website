@@ -1,6 +1,6 @@
 ---
 title: "3️⃣ 3mins papers"
-description: " / / /MI-HGNN"
+description: " / / Small Home Robot /MI-HGNN"
 date: "2025-02-24"
 categories: [paper, 3mins]
 toc: true
@@ -27,15 +27,16 @@ image: ../../images/3mins.png
 - [Code]()
 
 
-# paper 3
-> 
+# Small Home Robot
+> Learning Quiet Walking for a Small Home Robot
 
-- 
-- 
-- 
-- [Paper Link]()
-- [Code]()
+- 지금까지의 연구는 강화학습이 얼마나 제어기를 강건하게 만들었느냐, 혹은 얼마나 fancy한 움직임을 만들었느냐에 초점을 두어왔었음. 하지만, 본 논문은 실제 가정에 로봇이 투입이 되었을 때 불편함을 느낄 가능성이 높은 “소음”에 초점을 맞추어 연구를 진행했다. 이처럼, 기술적인 어려움보다도 실제 삶에 있어서 도움이 될만한 기술을 연구하는 것 또한 좋은 방향으로 보인다.
+- 기술적인 어려움은 크게 없으며 curriculum learning을 통해 1st phase에서는 소음을 신경쓰지 않는 모션을 학습하고, 2nd phase에서 조용한 모션을 학습하도록 만든다. 네트워크의 output은 “PD Gain의 Scale”과 “ Target Joints Position”을 내보내 stiff한 모션을 만들지 damping 있는 모션을 만들지 조정한다.
+- 본 실험(slope 극복실험)에 따르면 제어기의 강건도와 조용함이 반비례 관계임을 확인할 수 있었다. 미래에는 perceptive sensor를 통해 좀 더 고도화된 보행전략을 취하도록 만들 수 있을 것이다. 또한, 발자국 사운드와 관련이있는 발 접촉 속도를 최소화하는 간접 reward를 줌으로써 문제를 해결했는데 이는 토크를 줄이므로써 배터리 효율성을 증가시키는 방식 등으로 활용이 가능할 것이다.
+- [Paper Link](https://arxiv.org/abs/2502.10983)
+- [Youtube](https://www.youtube.com/watch?v=6RjkBHSYEcc)
 
+![](../../images/2025-02-24-papers/KakaoTalk_20250224_212428659.png)
 
 # MI-HGNN
 > Morphology-Informed Heterogeneous Graph Neural Network for Legged Robot Contact Perception

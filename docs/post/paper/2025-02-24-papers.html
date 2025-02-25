@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-02-24">
-<meta name="description" content="/ / /MI-HGNN">
+<meta name="description" content="/ / Small Home Robot /MI-HGNN">
 
-<title>BSRL - 3️⃣ 3mins papers</title>
+<title>3️⃣ 3mins papers – BSRL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-a81921e66b7d5878059d6e60734667ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
-  <li><a href="#paper-3" id="toc-paper-3" class="nav-link" data-scroll-target="#paper-3">paper 3</a></li>
+  <li><a href="#small-home-robot" id="toc-small-home-robot" class="nav-link" data-scroll-target="#small-home-robot">Small Home Robot</a></li>
   <li><a href="#mi-hgnn" id="toc-mi-hgnn" class="nav-link" data-scroll-target="#mi-hgnn">MI-HGNN</a></li>
   </ul>
 </nav>
@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    / / /MI-HGNN
+    / / Small Home Robot /MI-HGNN
   </div>
 </div>
 
@@ -184,18 +184,19 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="">Code</a></li>
 </ul>
 </section>
-<section id="paper-3" class="level1">
-<h1>paper 3</h1>
+<section id="small-home-robot" class="level1">
+<h1>Small Home Robot</h1>
 <blockquote class="blockquote">
-
+<p>Learning Quiet Walking for a Small Home Robot</p>
 </blockquote>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li><a href="">Paper Link</a></li>
-<li><a href="">Code</a></li>
+<li>지금까지의 연구는 강화학습이 얼마나 제어기를 강건하게 만들었느냐, 혹은 얼마나 fancy한 움직임을 만들었느냐에 초점을 두어왔었음. 하지만, 본 논문은 실제 가정에 로봇이 투입이 되었을 때 불편함을 느낄 가능성이 높은 “소음”에 초점을 맞추어 연구를 진행했다. 이처럼, 기술적인 어려움보다도 실제 삶에 있어서 도움이 될만한 기술을 연구하는 것 또한 좋은 방향으로 보인다.</li>
+<li>기술적인 어려움은 크게 없으며 curriculum learning을 통해 1st phase에서는 소음을 신경쓰지 않는 모션을 학습하고, 2nd phase에서 조용한 모션을 학습하도록 만든다. 네트워크의 output은 “PD Gain의 Scale”과 “ Target Joints Position”을 내보내 stiff한 모션을 만들지 damping 있는 모션을 만들지 조정한다.</li>
+<li>본 실험(slope 극복실험)에 따르면 제어기의 강건도와 조용함이 반비례 관계임을 확인할 수 있었다. 미래에는 perceptive sensor를 통해 좀 더 고도화된 보행전략을 취하도록 만들 수 있을 것이다. 또한, 발자국 사운드와 관련이있는 발 접촉 속도를 최소화하는 간접 reward를 줌으로써 문제를 해결했는데 이는 토크를 줄이므로써 배터리 효율성을 증가시키는 방식 등으로 활용이 가능할 것이다.</li>
+<li><a href="https://arxiv.org/abs/2502.10983">Paper Link</a></li>
+<li><a href="https://www.youtube.com/watch?v=6RjkBHSYEcc">Youtube</a></li>
 </ul>
+<p><img src="../../images/2025-02-24-papers/KakaoTalk_20250224_212428659.png" class="img-fluid"></p>
 </section>
 <section id="mi-hgnn" class="level1">
 <h1>MI-HGNN</h1>
@@ -249,18 +250,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -292,7 +282,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -300,7 +310,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -397,7 +407,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
