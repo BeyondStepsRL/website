@@ -1,6 +1,6 @@
 ---
 title: "3️⃣ 3mins papers"
-description: "Combining Legged and Manipulator/ / / /"
+description: "Impedance Matching/ / / /"
 date: "2025-02-28"
 categories: [paper, 3mins]
 toc: true
@@ -25,6 +25,6 @@ image: ../../images/3mins.png
 
 
 
-![](../../images/2025-02-28-papers/jihongkim_1.png)
-![](../../images/2025-02-28-papers/jihongkim_2.png)
+![](../../images/2025-02-26-papers /KakaoTalk_20250226_235549458.png)
+![](../../images/2025-02-28-papers /jihongkim_2.png)
 
