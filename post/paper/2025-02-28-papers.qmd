@@ -1,6 +1,6 @@
 ---
 title: "3️⃣ 3mins papers"
-description: "Combining Legged and Manipulator/ / / /"
+description: "Combining Legged and Manipulator/ Foundation Model / / /"
 date: "2025-02-28"
 categories: [paper, 3mins]
 toc: true
@@ -23,8 +23,15 @@ image: ../../images/3mins.png
 - 분명 이전에 이거랑 같은 컨셉인 시뮬레이션 논문이 아카이브에 올라왔었는데 지금은 못찾겠음. 확실히 직관적인 아이디어여도 실제 하드웨어로 실험을 해야 논문이 되는것같다.
 - [Paper Link](https://arxiv.org/abs/2201.03871)
 
-
-
 ![](../../images/2025-02-28-papers/jihongkim_1.png)
 ![](../../images/2025-02-28-papers/jihongkim_2.png)
 
+
+# Foundation Models in Robotics: Applications, Challenges, and the Future
+- 강화학습 + MPC 주제쪽으로 보고 있지만 이번에는 관심을 가지고 있는 Foundation model에 대해서 가지고 와봤다. 본 논문은 Foundation model이 로보틱스에서 어떤식으로 활용되어 왔고, 어떻게 연구가 될지에 대해서 논의하는 논문이다. Foundation model을 통해 로봇의 인지, 의사결정, 제어의 능력을 향상시키는 방법을 분석한다.
+- 특히, 기초 모델을 활용한 로봇 정책 학습과 강화학습의 접점으로 Language-Assisted Reinforcement Learning (LLM 기반 보상 학습 및 탐색), Vision-Language Value Learning (VLM을 활용한 Value Function 학습), Robotics Transformers (Transformer 기반 행동 정책 학습) 등이 제시되었으며, 이는 강화학습 기반의 제어기 설계에 유용할 수 있다.
+- 다만, 실시간 응답 속도 문제, 데이터 부족, 불확실성 정량화 부족 등의 한계가 존재하며, RL과 MPC를 결합한 제어기 학습을 위한 foundation model의 직접적인 적용 사례는 부족하다. 향후 연구 방향으로 RL과 결합 가능한 경량화된 foundation model 개발 및 로봇 제어 특화된 데이터셋 구축이 필요할 것으로 보인다.
+- [Paper Link](https://arxiv.org/abs/2312.07843)
+- [Youtube](https://www.youtube.com/watch?v=YUN-ajOxS_o)
+
+![](../../images/2025-02-28-papers/foundation_model_1.png)

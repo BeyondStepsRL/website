@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-02-28">
-<meta name="description" content="Combining Legged and Manipulator/ / / /">
+<meta name="description" content="Combining Legged and Manipulator/ Foundation Model / / /">
 
 <title>3️⃣ 3mins papers – BSRL</title>
 <style>
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-812a6083a2b47f75f9db70fad917e8a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-698eeccc465cafbf8f1934b30c85bcac.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -120,6 +120,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#training-in-simulation" id="toc-training-in-simulation" class="nav-link" data-scroll-target="#training-in-simulation">Training in Simulation</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
   </ul></li>
+  <li><a href="#foundation-models-in-robotics-applications-challenges-and-the-future" id="toc-foundation-models-in-robotics-applications-challenges-and-the-future" class="nav-link" data-scroll-target="#foundation-models-in-robotics-applications-challenges-and-the-future">Foundation Models in Robotics: Applications, Challenges, and the Future</a></li>
   </ul>
 </nav>
     </div>
@@ -137,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Combining Legged and Manipulator/ / / /
+    Combining Legged and Manipulator/ Foundation Model / / /
   </div>
 </div>
 
@@ -186,9 +187,20 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://arxiv.org/abs/2201.03871">Paper Link</a></li>
 </ul>
 <p><img src="../../images/2025-02-28-papers/jihongkim_1.png" class="img-fluid"> <img src="../../images/2025-02-28-papers/jihongkim_2.png" class="img-fluid"></p>
-
-
 </section>
+</section>
+<section id="foundation-models-in-robotics-applications-challenges-and-the-future" class="level1">
+<h1>Foundation Models in Robotics: Applications, Challenges, and the Future</h1>
+<ul>
+<li>강화학습 + MPC 주제쪽으로 보고 있지만 이번에는 관심을 가지고 있는 Foundation model에 대해서 가지고 와봤다. 본 논문은 Foundation model이 로보틱스에서 어떤식으로 활용되어 왔고, 어떻게 연구가 될지에 대해서 논의하는 논문이다. Foundation model을 통해 로봇의 인지, 의사결정, 제어의 능력을 향상시키는 방법을 분석한다.</li>
+<li>특히, 기초 모델을 활용한 로봇 정책 학습과 강화학습의 접점으로 Language-Assisted Reinforcement Learning (LLM 기반 보상 학습 및 탐색), Vision-Language Value Learning (VLM을 활용한 Value Function 학습), Robotics Transformers (Transformer 기반 행동 정책 학습) 등이 제시되었으며, 이는 강화학습 기반의 제어기 설계에 유용할 수 있다.</li>
+<li>다만, 실시간 응답 속도 문제, 데이터 부족, 불확실성 정량화 부족 등의 한계가 존재하며, RL과 MPC를 결합한 제어기 학습을 위한 foundation model의 직접적인 적용 사례는 부족하다. 향후 연구 방향으로 RL과 결합 가능한 경량화된 foundation model 개발 및 로봇 제어 특화된 데이터셋 구축이 필요할 것으로 보인다.</li>
+<li><a href="https://arxiv.org/abs/2312.07843">Paper Link</a></li>
+<li><a href="https://www.youtube.com/watch?v=YUN-ajOxS_o">Youtube</a></li>
+</ul>
+<p><img src="../../images/2025-02-28-papers/foundation_model_1.png" class="img-fluid"></p>
+
+
 </section>
 
 </main> <!-- /main -->
