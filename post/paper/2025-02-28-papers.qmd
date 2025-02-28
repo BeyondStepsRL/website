@@ -1,0 +1,30 @@
+---
+title: "3️⃣ 3mins papers"
+description: "Impedance Matching/ / / /"
+date: "2025-02-28"
+categories: [paper, 3mins]
+toc: true
+image: ../../images/3mins.png
+---
+
+# Combining Learning-based Locomotion Policy with Model-based Manipulation for Legged Mobile Manipulators
+### 3줄요약
+- MPC를 사용하는 매니퓰레이터와 RL을 사용하는 4족로봇의 통합
+- 매니퓰레이터가 움직이면, 4족로봇은 그 외란을 예측해서 로봇이 균형을 유지하고 안정적으로 이동할 수 있게 함.
+- RL은 매니퓰레이터의 동역학 모델을 직접적으로 사용하지 않음. 시뮬레이션에서 외란을 가해준다음에 MSE를 통해 예측모델을 만드는것임.
+
+### Training in Simulation
+- 로봇은 시뮬레이션 환경에서 무작위 힘의 조합인 wrench sequence를 적용받음. 학습과정에서 이 렌치 시퀀스 예측을 수행함.
+- 학습중에는 별도의 매니퓰레이터 제어기가 필요하지 않음. legged gym에서 push robot과 같은 함수를 지속적으로 가해주는것과 동일함.
+
+### Results
+- 매니퓰레이터의 다양한 동작과 무게 변화에 대한 적응성이 생김.
+- 제어 시스템을 4족로봇, 매니퓰레이터 컨트롤러 두개의 모듈로 분리하여 각 모듈의 독립적인 개발 및 최적화를 가능하게 함.
+- 분명 이전에 이거랑 같은 컨셉인 시뮬레이션 논문이 아카이브에 올라왔었는데 지금은 못찾겠음. 확실히 직관적인 아이디어여도 실제 하드웨어로 실험을 해야 논문이 되는것같다.
+- [Paper Link](https://arxiv.org/abs/2201.03871)
+
+
+
+![](../../images/2025-02-26-papers /KakaoTalk_20250226_235549458.png)
+![](../../images/2025-02-28-papers /jihongkim_2.png)
+
