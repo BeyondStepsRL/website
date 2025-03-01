@@ -1,8 +1,7 @@
 ---
-title: "Research Goal"
+title: "Goal"
 description: The list of Conferences/Journals
 date: "2025-03-01"
-categories: [goal]
 image: ../../images/goal.jpg
 toc: true
 ---

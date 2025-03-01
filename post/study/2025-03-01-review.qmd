@@ -1,0 +1,616 @@
+---
+title: "Learning robust perceptive locomotion for quadrupedal robots in the wild"
+description: 논문 읽는 법에 관한 영상 요약
+date: "2025-03-01"
+categories: [review]
+image: ../../images/review.jpg
+toc: true
+author: "Jungyeon Lee"
+format: 
+    revealjs:
+        smaller: true 
+        scrollable: true 
+        center-title-slide: false
+        footer: "[BSRL](https://beyondstepsrl.github.io/website/)"
+---
+
+# Abstract
+
+눈에 띄였던 키워드
+
+- 보행 제어를 위한 **불완전하고 Noise가 있는 인식**을 **신뢰성 있게** 해석하여 사용
+- Integrating exteroceptive + proprioceptive
+    - Attention-based recurrent encoder 
+- DARPA Subterranean Challenge에서 팀 Cerberus의 기본 컨트롤러로 사용: 1등!
+
+
+# Results
+
+::: {.panel-tabset}
+
+### 1 
+
+**Fast and robust locomotion in the wild**
+
+> 빠르고 견고한 이동
+
+- **다양한 지형에서 강력한 성능**  
+  - 알프스, 숲, 지하, 도시 등에서 안정적인 보행  
+  - 낙하 없이 부드럽고 빠른 이동 유지  
+
+- **Exteroception을 활용한 지형 적응**  
+  - 지형을 예측하여 장애물 및 계단에서도 효과적인 보행  
+
+- **자연 및 도시 환경에서도 높은 적응력**  
+  - 가파른 경사, 미끄러운 표면, 풀, 눈 등 도전적인 조건 극복  
+  - 기존 로봇(Spot)과 달리 특별한 설정 없이 자유롭게 계단 이동  
+
+- **눈 덮인 계단에서도 신뢰성 유지**  
+  - 센서 오류 및 발 미끄러짐에도 실패 없이 안정적인 작동
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301143041845.png"  width="67%" />
+</center>
+
+### 2
+
+**A hike in the Alps**
+
+> 알프스 하이킹
+
+- **하이킹 실험 개요**  
+  - 스위스 에첼 산에서 ANYmal의 강건성 테스트  
+  - 2.2km 거리, 120m 고도 상승 포함  
+
+- **경로의 도전 요소**  
+  - 가파른 경사(최대 38%), 높은 단계, 바위 표면, 미끄러운 지면, 나무 뿌리 장애물 존재  
+  - 식생으로 인한 height map 오류 발생  
+
+- **실험 결과**  
+  - 분리된 신발 수리 및 배터리 교체 외에는 실패 없이 완주  
+  - 정상 도착: 31분 (인간 예상 시간 35분보다 빠름)  
+  - 전체 경로 완료: 78분 (하이킹 플래너 예상 76분과 유사)  
+
+- **로봇의 성능**  
+  - 인간의 도움 없이 자율적으로 이동  
+  - 단 한 번의 낙하 없이 하이킹 성공
+
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301163322598.png"  width="67%" />
+</center>
+
+### 3
+
+**Evaluating the contribution of exteroception**
+
+> exteroception이 로봇의 이동 성능에 미치는 영향을 정량적으로 평가
+
+- Exteroception의 한계  
+  - **센서 감지 오류**: 반사성/반투명 표면에서 깊이 추정 실패 (예: 금속 바닥, 눈)  
+  - **2.5D 고도 맵의 제약**: 나뭇가지·낮은 천장을 높은 장애물로 오인, 부드러운 식생·깊은 눈에서 부정확한 정보 제공  
+  - **미끄럽거나 변형 가능한 표면**: 오도메트리 드리프트 유발, 맵 구축 오류 발생  
+  - **시점 제한**: 로봇 뒤쪽 영역이 맵에 포함되지 않아 오르막에서 문제 발생  
+
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301163609166.png"  width="67%" />
+</center>
+
+
+- **Controller의 적응성**  
+  - Exteroception의 신뢰성을 평가하는 신뢰 상태 추정기 활용  
+  - 감각 정보가 신뢰할 수 없을 경우, Proprioception(고유감각) 운동으로 자연스럽게 전환  
+  - Exteroception을 사용할 수 있을 때는 빠른 예측 운동 수행, 그렇지 않을 때는 안정적인 자체 감각 제어 유지
+  - Proprioception만 사용하는 Baseline과 비교  
+
+- **계단 극복 실험**  
+  - 12cm~36.5cm 높이의 나무 계단을 극복하는 성공률 비교  
+  - 최대 30.5cm까지 신뢰성 있게 극복  
+    - Baseline은 20cm부터 성공률 급감, 뒷다리가 종종 올라가지 못함  
+  - 32cm 이상에서는 물리적 한계를 인식하고 무리한 시도를 피함  
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301163541345.png"  width="67%" />
+</center>
+
+- **장애물 코스 실험**  
+  - 로봇이 경사진 플랫폼, 높이 있는 플랫폼, 계단, 블록 더미 등을 통과하도록 설정  
+  - 외부 감각을 활용하여 사전 조정 후 부드럽게 통과  
+    - Baseline은 장애물에 걸려 진행 불가, 실험 지속을 위해 수동 개입 필요  
+
+- **최대 이동 속도 비교**  
+  - **평지 속도**: 1.2m/s (Baseline 0.6m/s)
+  - **장애물 위 속도**: 속도 저하 없이 통과 (Baseline는 막힘)
+  - **회전 속도**: 3 rad/s (Baseline 0.6 rad/s (5배 차이))
+
+
+### 4
+
+**Evaluating robustness with belief state visualization**
+
+> belief state 시각화를 통한 robustness 평가
+
+- 로봇이 Proprioception과 Exteroception을 어떻게 통합하는지 분석  
+- Exteroception이 불완전하거나 오류를 포함할 때의 반응 평가  
+
+- **모호한 Exteroception 실험**  
+  - **불투명 폼 장애물**: 센서가 단단한 장애물로 오인 → 로봇이 발을 디뎠으나 불안정  
+    - 접촉 후 빠르게 높이 추정을 수정하여 적응  
+  - **투명 장애물(아크릴 블록)**: 센서가 인식하지 못함 → 로봇이 접촉 후 보행 방식 조정  
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301204039127.png"  width="67%" />
+</center>
+
+- **Exteroception 완전 차단 실험**  
+  - 센서를 덮어 Exteroception을 무효화한 상태에서 계단 오르내리기  
+  - **정상 센서 상태**: 매끄럽게 계단을 통과  
+  - **센서 차단 상태**: 첫 번째 계단에서 예상치 못한 접촉 발생 → 지형 추정을 수정하며 적응  
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301204059581.png"  width="67%" />
+</center>
+
+- **미끄러운 표면에서의 반응 실험**  
+  - 발이 미끄러짐을 감지한 후 보행 속도를 조정하여 균형 유지  
+  - 미끄러짐으로 인해 고도 맵이 불안정해졌을 때, Exteroception을 배제하고 Proprioception으로 보행 유지 
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301204137285.png"  width="67%" />
+</center>
+
+
+**결론**  
+
+- 로봇은 Exteroception을 신뢰하지만, 오류를 감지하면 즉각 수정하여 적응  
+- Exteroception이 무효화되면 Proprioception을 활용하여 안정적으로 이동  
+- 환경 변화에 따라 보행 방식을 유연하게 조정하는 능력 입증
+
+:::
+
+# Method
+
+::: {.panel-tabset}
+
+### 문제 정의
+
+**POMDP**
+
+- $o_t \neq s_t$
+- 과거 관측 데이터 $\left\{o_0, \cdots, o_t\right\}$ 를 이용해 신뢰 상태(belif state) $b_t$를 구성하여 전체 상태를 추정
+- Privileged Learning 활용
+    - Teacher Policy: Privileged Information를 활용해 먼저 학습
+    - Student Policy: 지도 학습을 통해 Teacher 정책을 압축하여 학습
+
+### 학습 환경
+1. RaiSim / ANYmal-C
+2. Terrain
+
+    ```
+        - height map으로 모델링
+        - 다양한 경사 및 계단 지형을 포함하여 네 가지 계단 유형 모델링  
+            - 표준(Standard), 개방형(Open), 단턱형(Ledged), 무작위(Random) 계단
+        - 계단을 박스 형태로 구성하여 훈련  
+    
+        - height map 기반 계단의 문제점
+            - height map으로 모델링한 계단의 단차(riser)는 완전히 수직이 아님  
+            - 정책이 시뮬레이션에서 이 비수직성을 악용하는 현상 발견  
+            - 이로 인해 현실(world)에서의 성능 저하(sim-to-real transfer 문제) 발생
+    ```
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301164726609.png"  width="67%" />
+</center>
+
+3. Domain Randomization
+
+    ```
+        - 로봇의 몸체 및 다리 질량 무작위화
+        - 초기 관절 위치 및 속도, 초기 몸체 자세 및 속도 무작위화
+        - 외부 힘(Force) 및 토크(Torque) 적용
+        - 발 마찰 계수를 낮춰 미끄러짐(Slippage) 유도
+    ```
+
+4. Termination
+
+    ```
+        - 로봇이 비정상적인 상태(Undesirable State) 에 도달하면 에피소드 종료 후 재시작
+            - 몸체가 지면과 충돌
+            - 과도한 몸체 기울기 발생
+            - 관절 액추에이터의 토크 한계 초과
+    ```
+
+### Teacher policy 
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301165725873.png"  width="67%" />
+</center>
+
+- Privileged Information를 활용하여 최적의 reference 정책 학습
+- 랜덤 지형에서 원하는 속도 명령을 따르는 정책 학습
+    - $\mathbf{v}_{\text {des }} \in \mathbb{R}^3=\left(v_x, v_y, \omega\right)$
+- PPO 사용
+    - 가우시안 policy: $a_t \sim \text{N}\left(\pi_\theta\left(o_t=s_t\right), \sigma I\right)$
+
+---
+
+**Observation / Action**
+
+- $o_t^{\text {teacher }}=\left(o_t^p, o_t^e, s_t^p\right)$
+    - $o_t^p$: 고유 감각(Proprioceptive)
+        - 몸체 속도, 자세, 관절 위치 및 속도 이력
+        - 행동 이력, 각 다리의 보행 위상(phase)
+    - $o_t^e$: 외부 감각(Exteroceptive)
+        - 각 발 주변에서 5개의 반경(radii) 을 기준으로 샘플링한 높이 정보
+    - $s_t^p$: Privilaged 상태
+        - 접촉 상태, 접촉 힘, 접촉 법선(normal), 마찰 계수
+        - 허벅지(thigh) 및 정강이(shank) 접촉 여부
+        - 로봇 몸체에 작용하는 외력 및 토크, 보행 스윙(swing) 지속 시간
+
+- CPG(Central Pattern Generator) 기반 action 설계
+    - 각 다리 $\text{L}={1,2,3,4}$ 가 보행 위상 변수 $\phi_L$ 를 유지
+    - 보행 위상을 기반으로 발끝(foot tip)의 nominal trajectory 정의
+    - desired joint position $q_i\left(\phi_L\right)$ 계산: 역기구학 사용
+    - policy output
+        - 위상 변화량 $\Delta \phi_L$
+        - 관절 목표 잔차 $\Delta q_i$ (기본 궤적에서의 보정값)
+
+
+---
+
+**Architecture**
+
+- MLP 기반
+  - 입력 데이터를 간결한 표현으로 압축 → 효율적이고 안정적인 학습 가능  
+  - Student Policy가 일부 Teacher Policy 구조를 재사용 가능
+  - 세 가지 주요 구성 요소 포함
+
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301173754914.png"  width="40%" />
+</center>
+
+
+1. **exteroceptive encoder $g_e$**  
+    - 입력: $o_t^e$ (외부 감각 정보)  
+    - 출력: latent representation $l_t^e$
+
+\begin{equation}
+l_t^e=g_e\left(o_t^e\right)
+\end{equation}
+
+2. **privileged encoder $g_p$**  
+    - 입력: $s^p_t$ (특권 상태 정보)  
+    - 출력: latent representation $l^{priv}_t$
+
+\begin{equation}
+l_t^{p r i v}=g_p\left(s_t^p\right)
+\end{equation}
+
+3. **main network**  
+    - 위 인코더에서 생성된 latent representation을 활용하여 정책 학습  
+
+---
+
+**Reward**
+
+
+1. 속도 명령 준수 보상 $r_{\text{command}}$
+
+    - 로봇이 원하는 속도 명령을 따르도록 유도 
+    - yaw 회전 속도에 대해서도 동일한 보상 적용   
+
+        $r_{\text {command }}= \begin{cases}1.0, & \text { if } \boldsymbol{v}_{\text {des }} \cdot \boldsymbol{v}>\left|\boldsymbol{v}_{\text {des }}\right| \\ \exp \left(-\left(\boldsymbol{v}_{\text {des }} \cdot \boldsymbol{v}-\left|\boldsymbol{v}_{\text {des }}\right|\right)^2\right), & \text { otherwise }\end{cases}$
+
+    - 변수 설명:  
+        - $v_{\text{des}} \in \mathbb{R}^2$: **목표 수평 속도 (바디 프레임 기준)**  
+        - $v \in \mathbb{R}^2$: **현재 수평 속도 (바디 프레임 기준)**  
+    
+2. 페널티 항 (제약 위반 방지)
+    - **목표와 직교하는 속도** → 목표 방향에서 벗어나지 않도록 페널티 부여  
+    - **몸체의 롤, 피치, 요 속도** → 불필요한 회전 방지  
+    - **체형 안정성 관련 페널티**  
+        - 몸체 자세 (Body Orientation) → 비정상적인 자세 방지  
+        - 관절 토크, 속도, 가속도 → 과격한 동작 방지  
+        - 발 미끄러짐 (Foot Slippage) 및 정강이/무릎 충돌 (Shank & Knee Collision) 방지  
+
+3. 보상 튜닝 과정
+    - 시뮬레이션에서 정책의 행동을 직접 관찰하여 보상 항 조정
+    - 이동 성능뿐만 아니라 **보행의 부드러움(Smoothness)** 도 평가 
+    - 최종 보상 식: $r=0.75\left(r_{l v}+r_{a v}+r_{l v o}\right)+r_b+$ $0.003 r_{f c}+0.1 r_{c o}+0.001 r_j+0.08 r_{j c}+0.003 r_s+1.0 \cdot 10^{-6} r_\tau+$ $0.003 r_{\text {slip }}$
+
+---
+
+**커리큘럼 학습**
+
+- 난이도를 점진적으로 증가시키는 **두 가지 커리큘럼**을 적용
+
+1. 지형 난이도 커리큘럼 (Terrain Curriculum)
+    - **적응형 방법(Adaptive Method) 활용**  
+    - **파티클 필터(Particle Filter)** 를 사용하여 지형 난이도를 조정  
+    - 정책 학습 중 **항상 도전적이지만 해결 가능한 수준**의 지형을 유지  
+
+2. 보상 및 외란 조정 커리큘럼
+    - Domain Randomization 및 특정 보상 항목(관절 속도, 가속도, 자세, 미끄러짐, 정강이/허벅지 접촉 등)의 크기를 점진적으로 증가  
+    - 적용 방식: **로지스틱 함수(Logistic Function) 기반 변화율 적용**  
+        - $c_{k+1}=\left(c_k\right)^d$
+            - $c_k$: 현재 커리큘럼 요소(난이도) 값
+            - $d$: 수렴 속도 $0 < d < 1$
+            - $c_k$ 값이 점진적으로 증가하며 최대 1로 수렴
+
+
+### Student policy
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301165848730.png"  width="67%" />
+</center>
+
+- Distillation Teacher → Student Policy
+    - Teacher: Privileged Information를 활용하여 학습됨  
+    - Student: **실제 로봇에서 사용할 수 있는 정보만 접근 가능해야 함**  
+- **Student Policy은 Privileged Information 없이도 Teacher 정책의 성능을 유지하면서 강건하게 동작하도록 학습**  
+- **Noise 적용 + Belief State Encoder** 를 통해 **POMDP 해결**
+
+---
+
+**학습 과정**
+
+- **학습 과정은 동일하게 유지**, 하지만 **Student 정책의 높이 샘플 관측에 추가적인 Noise** 적용
+    - 실제 환경에서 흔히 발생하는 외부 감각 오류를 시뮬레이션
+    - 예: 센서 오작동, 깊이 측정 오류, 반사율이 높은 표면에서의 감지 실패 등  
+
+  $$
+  o^{\text{student}}_t = (o^p_t, n(o^e_t))
+  $$
+
+    - **$o^p_t$**: 고유 감각(Proprioceptive) 관측 정보  
+    - **$o^e_t$**: 외부 감각(Exteroceptive) 관측 정보  
+    - **$n(o^e_t)$**: Noise 모델을 적용한 외부 감각 데이터  
+  
+---
+
+**Belief State Estimation**
+
+- **순차적 정보(Squential Information)를 활용하여 보정**  
+- **외부 감각 + 고유 감각의 시퀀스를 통합**하여 Belief State 추정  
+- **Recurrent Belief State Encoder 적용**  
+    - **RNN, GRU, 또는 LSTM** 같은 순환 구조를 사용하여 시간적 상관관계 유지  
+
+---
+
+**Architecture**
+
+**Recurrent Belief State Encoder + MLP**  
+
+- **MLP 구조 유지 및 가중치 초기화**  
+- Teacher Policy과 동일한 MLP 구조 사용. Teacher Policy의 가중치를 재사용하여 학습 속도 향상
+- **hidden state $h_t$** 를 유지하여 **시간적 정보(Time Dependency) 유지**  
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301191545823.png"  width="70%" />
+</center>
+
+1. 입력:
+    - Student Policy 관측 $o^{\text{student}}_t$  
+    - hidden state $h_t$  
+2. Belief State 벡터 $b_t$ 생성:
+    - Belief State Encoder를 통해 **잠재 벡터 $b_t$** 출력  
+    - **$b_t$ 가 Teacher Policy의 특징 벡터 $(l^e_t, l^{priv}_t)$ 와 유사하도록 학습**  
+3. 최종 정책 출력:
+    - $b_t$ 와 고유 감각 $o^p_t$ 를 **MLP에 입력하여 최종 Action 출력**  
+
+---
+
+**학습 방식**
+
+- Student Policy은 **지도 학습** 방식으로 학습되며, **2 가지 손실 함수**를 최소화함  
+    - 지도 학습(Behavior Cloning + Reconstruction Loss) 방식으로 빠르게 학습 가능
+
+1. Behavior Cloning Loss
+   - 동일한 상태와 속도 명령이 주어졌을 때  
+   - **Student Policy 행동과 Teacher Policy 행동 간의 차이 최소화**  
+   - **손실 함수:**  
+     $$
+     L_{\text{BC}} = || a_{\text{student}} - a_{\text{teacher}} ||^2
+     $$
+
+2. Reconstruction Loss
+   - 신뢰 상태 $b_t$ 가 **Teacher Policy의 특징 벡터** 와 유사하도록 학습  
+   - **잡음이 없는 높이 샘플 및 특권 정보 $(o^e_t, s^p_t)$ 와의 차이 최소화**  
+   - **손실 함수:**  
+     $$
+     L_{\text{Recon}} = || b_t - (l^e_t, l^{priv}_t) ||^2
+     $$
+
+- Rollout for Robustness
+    - **Student Policy을 직접 롤아웃(Rollout) 하면서 데이터 생성**  
+    - 실제 배치 환경에서도 강건한 행동을 하도록 학습 강화
+
+### Deployment
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301170752258.png"  width="67%" />
+</center>
+
+**ANYmal-C 로봇에서 컨트롤러 배포 및 센서 구성**
+
+- 두 가지 센서 구성 사용
+    1. LiDAR 기반 구성: Robosense Bpearl 돔 LiDAR 2개 사용
+    2. Depth 카메라 기반 구성: Intel RealSense D435 Depth 카메라 4개 사용
+- Zero-Shot 모델 배포 및 실행: 세부 조정 없이 즉시 실행 가능
+- height map 구축
+    - 로봇 중심의 **2.5D Height Map 구축**  
+    - **포인트 클라우드(센서 데이터) 활용**, 20Hz 주기로 업데이트  
+    - 정책은 **50Hz로 실행**, 최신 height map에서 높이 샘플링  
+    - 맵 정보가 부족한 영역은 무작위 값으로 보완
+- 빠른 지형 매핑 시스템 개발: 빠른 보행 속도에 맞춰 실시간 환경 분석 가능  
+    - GPU 병렬 처리 기반 고도 매핑 파이프라인 구축
+    - 칼만 필터 기반 맵 업데이트
+    - 드리프트 보정 및 레이 캐스팅(ray-casting) 적용  
+
+:::
+
+---
+
+## Height sample randomization
+
+> Student Policy 방법론 더 자세히
+
+👉 핵심 아이디어
+```
+- 실제 환경에서 발생할 수 있는 다양한 센서 오류 및 맵 품질 저하를 학습 시뮬레이션
+- Noise 적용 방식을 세분화하여 다양한 조건에서 정책이 강건하게 작동하도록 유도
+- 지형 특성 변화도 반영하여 현실적인 지형 적응 능력 강화
+```
+
+1. **Noise 모델 적용**
+
+- Noise 모델 $n(\tilde{o}^e_t | o^e_t, z)$, $z \in \mathbb{R}^{8 \times 4}$ 사용
+- **높이 샘플에 두 가지 유형의 측정 Noise 추가**
+  1. Scan Point를 수평으로 이동(Shift)  
+  2. 높이 값에 교란 추가(Height Disturbance)  
+- Noise 값은 **가우시안 분포** 에서 샘플링되며, **Noise 매개변수 $z$ 가 분산을 결정**
+    - **Noise 매개변수 벡터 $z$ 는 커리큘럼 학습의 일부**  
+    - **훈련 기간이 진행됨에 따라 Noise 강도를 선형적으로 증가**  
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301195453432.png"  width="50%" />
+</center>
+
+- Noise는 **3가지 다른 범위** 에서 적용  
+  1. **Per-Scan-Point** → 각 스캔 포인트마다 매 시간 단계마다 재샘플링
+  2. **Per-Foot** → 각 다리(발)별로 매 시간 단계마다 재샘플링
+  3. **Per-Episode** → 모든 스캔 포인트에 대해 일정한 Noise 유지
+
+**매핑 오류 시뮬레이션**
+
+- 맵 품질 변화 및 오류 원인 시뮬레이션
+- **3가지 매핑 조건 정의** (훈련 에피소드에서 60%, 30%, 10% 확률로 선택)  
+  1. **정상적인 운영 상태** → 양호한 맵 품질, 표준적인 Noise 적용  
+  2. **지도 오프셋 발생** → 자세 추정 드리프트 또는 변형 가능한 지형(예: 진흙, 눈)으로 인해 큰 오프셋 추가  
+  3. **매핑 실패 시뮬레이션** → 폐색(occlusion) 또는 센서 오류로 인해 각 스캔 포인트에 큰 Noise 추가  
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301200243927.png"  width="50%" />
+</center>
+
+
+**지형 변화 시뮬레이션**
+
+- 훈련 지형을 셀(Cell) 단위로 나누고, 특정 셀의 height map에 추가 오프셋 적용
+- **서로 다른 지형 특성 간의 전환 시뮬레이션** (예: 식생, 깊은 눈 등)  
+
+
+## Belief state encoder
+
+> Student Policy 방법론 더 자세히
+
+```
+👉 핵심 아이디어
+- 고유 감각(Proprioception)과 외부 감각(Exteroception) 정보를 효과적으로 통합
+    - 외부 감각의 신뢰도를 학습하여 동적으로 조절 
+    - 외부 감각이 부정확할 때는 고유 감각을 더 많이 활용하도록 학습
+- RNN(GRU) 기반으로 Belif state를 추정하여 POMDP 문제 해결 
+- 게이트 디코더를 활용하여 Belif state의 유효성을 보장
+```
+
+**Gated Encoder**
+
+- **게이트 RNN 모델**과 **Multi-Modal Information Fusion** 기법에서 영감  
+- **adaptive gating 메커니즘** 사용 → 외부 감각 정보를 얼마나 반영할지 조절  
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301202120250.png"  width="50%" />
+</center>
+
+**Belif state 계산 과정**
+
+1. **입력 데이터**  
+    - 고유 감각: $o^p_t$  
+    - 노이즈가 포함된 외부 감각 특징: $l^e_t = g_e(\tilde{o}^e_t)$  
+    - 이전 숨겨진 상태: $h_t$  
+
+2. **RNN을 통해 중간 Belif state $b^\text{'}_t$ 계산**  
+    $$
+    b^\text{'}_t, h_{t+1} = \text{RNN}(o^p_t, l^e_t, h_t)
+    $$
+    - GRU(Gated Recurrent Unit) 기반 RNN 사용  
+    - 시간적 정보(Sequential Information) 유지
+
+3. **attention 벡터 $\alpha$ 계산**: 외부 감각 정보를 얼마나 반영할지 결정
+    $$
+    \alpha = \sigma(g_a(b^\text{'}_t))
+    $$
+    - $g_a$: 완전 연결 신경망(FCN)
+    - $\sigma(\cdot)$: 시그모이드 활성화 함수
+    - $\alpha$ 값이 클수록 외부 감각 정보를 **더 많이 반영**
+
+4. **최종 Belif state $b_t$ 계산**  
+    $$
+    b_t = g_b(b^\text{'}_t) + l^e_t \cdot \alpha
+    $$
+    - $g_b$: 완전 연결 신경망(FCN)
+    - 외부 감각 정보 $l^e_t$ 를 attention 벡터 $\alpha$ 에 의해 가중 조합  
+
+**Gated Decoder**
+
+- 같은 게이트 메커니즘을 디코더에서도 사용
+- Privileged Information 및 높이 샘플을 재구성
+- Reconstruction Loss 계산 → Belif state $b_t$ 가 환경 정보를 올바르게 반영하도록 유도
+
+<center>
+<img src="../../images/2025-03-01-review/image-20250301202211881.png"  width="50%" />
+</center>
+
+
+**GRU(Gated Recurrent Unit) 사용 이유**
+
+- GRU는 LSTM보다 계산량이 적으면서도 장기 의존성(Long-term dependencies)을 효과적으로 유지
+- 게이트 구조를 통해 중요한 정보만 선택적으로 저장 및 업데이트 가능
+
+
+# Conclusion
+
+- **Belif State**를 이용하여 외부 감각(Exteroception)과 고유 감각(Proprioception) 통합
+    - **외부 감각**: 지형을 예측하여 보행 조정 → 빠르고 우아한 이동 가능  
+    - **외부 감각이 부정확할 경우**: 고유 감각 기반으로 원활한 전환  
+- 시각 기반 보행의 **속도와 유연성** + 고유 감각 기반 보행의 **강건성** 결합  
+
+- 검증 및 성능 평가
+    - **실험 및 실제 환경에서 성능 검증**  
+        - 알프스 "어려움" 난이도의 1시간 하이킹 코스 완주
+        - 인간의 도움 없이 이동 (단, 신발 재부착 및 배터리 교체 제외)
+        - 인간 하이커와 동등한 속도로 수행
+    - **DARPA 지하 챌린지(DARPA Subterranean Challenge)에서 1위 달성** 
+        - Cerberus 팀의 기본 컨트롤러로 사용
+        - 거친 지형, 장애물, 먼지, 안개, 물, 연기 속에서도 강건한 탐색 성능 발휘
+        - 네 대의 ANYmal 로봇이 터널, 도시, 동굴 환경에서 단 한 번의 낙하 없이 탐험 성공
+
+# Future Work
+
+**(1) 불확실성 정보 활용**
+
+- 현재 정책은 **불확실성을 암묵적으로(Encoder) 추정**  
+- **명시적 불확실성 추정 추가 시 개선 가능**  
+  - 예: 절벽이나 디딤돌 앞에서 **발로 지형을 직접 탐색하여 신뢰도 향상**  
+
+**(2) 원시 센서 데이터 직접 활용**
+
+- 현재는 **elevation map 기반 중간 표현 사용**  
+  - 특정 외부 감각 센서(LiDAR, 스테레오 카메라)와 독립적으로 동작 가능
+  - **하지만, 원시 감각 데이터를 직접 활용하면 추가적인 재질 및 질감 정보 반영 가능**  
+- **elevation map 업데이트 방식 개선 필요**  
+  - 현재는 **고전적인 자세 추정 모듈(pose estimation module)에 의존**  
+  - **네트워크와 통합 학습하면 성능 향상 가능**  
+
+**(3) 가려짐(Occlusion) 모델 학습**
+
+- 정책이 **절벽 뒤의 시야 차단(occlusion)을 인식하도록 학습**  
+  - **발을 잘못 디디지 않도록 예측 가능성 향상**  
+
+**(4) 비정상적인 보행 기동 지원**  
+
+- 현재 정책은 **정상적인 보행 중심**  
+- **특수한 이동 기술 부족**  
+  - 예: **좁은 구멍에 다리가 끼었을 때 복구**, **높은 턱을 오르는 동작 지원 필요** 
