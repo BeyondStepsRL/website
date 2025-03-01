@@ -1,6 +1,6 @@
 ---
 title: "Learning robust perceptive locomotion for quadrupedal robots in the wild"
-description: 논문 읽는 법에 관한 영상 요약
+description: tbai 2nd paper review
 date: "2025-03-01"
 categories: [review]
 image: ../../images/review.jpg
