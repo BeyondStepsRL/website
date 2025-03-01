@@ -1,5 +1,5 @@
 ---
-title: "3️⃣ 3mins papers"
+title: "[3] 3mins papers"
 description: "Hybrid Internal Model/Locomotion over Challenging Terrain/Extreme Parkour/Differentiable Simulation"
 date: "2025-02-22"
 categories: [paper, 3mins]

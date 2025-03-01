@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-02-28">
-<meta name="description" content="Combining Legged and Manipulator/ Foundation Model / / /">
+<meta name="dcterms.date" content="2025-03-01">
+<meta name="description" content="논문 읽는 법에 관한 영상 요약">
 
-<title>[5] 3mins papers – BSRL</title>
+<title>How to read papers – BSRL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -114,13 +114,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators" id="toc-combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators" class="nav-link active" data-scroll-target="#combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators">Combining Learning-based Locomotion Policy with Model-based Manipulation for Legged Mobile Manipulators</a>
-  <ul class="collapse">
-  <li><a href="#줄요약" id="toc-줄요약" class="nav-link" data-scroll-target="#줄요약">3줄요약</a></li>
-  <li><a href="#training-in-simulation" id="toc-training-in-simulation" class="nav-link" data-scroll-target="#training-in-simulation">Training in Simulation</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  </ul></li>
-  <li><a href="#foundation-models-in-robotics-applications-challenges-and-the-future" id="toc-foundation-models-in-robotics-applications-challenges-and-the-future" class="nav-link" data-scroll-target="#foundation-models-in-robotics-applications-challenges-and-the-future">Foundation Models in Robotics: Applications, Challenges, and the Future</a></li>
+  <li><a href="#논문-읽기의-효율적-접근법" id="toc-논문-읽기의-효율적-접근법" class="nav-link active" data-scroll-target="#논문-읽기의-효율적-접근법">1. 🔍 논문 읽기의 효율적 접근법</a></li>
+  <li><a href="#랜드마크-논문-찾기-연구의-시작점" id="toc-랜드마크-논문-찾기-연구의-시작점" class="nav-link" data-scroll-target="#랜드마크-논문-찾기-연구의-시작점">2. 🔍 랜드마크 논문 찾기: 연구의 시작점</a></li>
+  <li><a href="#연구-분야의-큰-그림-파악하기" id="toc-연구-분야의-큰-그림-파악하기" class="nav-link" data-scroll-target="#연구-분야의-큰-그림-파악하기">3. 🔍 연구 분야의 큰 그림 파악하기</a></li>
+  <li><a href="#논문-읽기의-효율적-접근-방법" id="toc-논문-읽기의-효율적-접근-방법" class="nav-link" data-scroll-target="#논문-읽기의-효율적-접근-방법">4. 🔍 논문 읽기의 효율적 접근 방법</a></li>
+  <li><a href="#좋은-논문의-조건과-효과적인-논문-읽기-방법" id="toc-좋은-논문의-조건과-효과적인-논문-읽기-방법" class="nav-link" data-scroll-target="#좋은-논문의-조건과-효과적인-논문-읽기-방법">5. 🔍 좋은 논문의 조건과 효과적인 논문 읽기 방법</a></li>
   </ul>
 </nav>
     </div>
@@ -129,16 +127,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">[5] 3mins papers</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">paper</div>
-    <div class="quarto-category">3mins</div>
-  </div>
-  </div>
+<h1 class="title">How to read papers</h1>
+</div>
 
 <div>
   <div class="description">
-    Combining Legged and Manipulator/ Foundation Model / / /
+    논문 읽는 법에 관한 영상 요약
   </div>
 </div>
 
@@ -149,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 28, 2025</p>
+      <p class="date">March 1, 2025</p>
     </div>
   </div>
   
@@ -161,44 +155,77 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators" class="level1">
-<h1>Combining Learning-based Locomotion Policy with Model-based Manipulation for Legged Mobile Manipulators</h1>
-<section id="줄요약" class="level3">
-<h3 class="anchored" data-anchor-id="줄요약">3줄요약</h3>
+<blockquote class="blockquote">
+<p><a href="https://youtu.be/XJqWigLmxQM?si=LeJaVc1EnJ72uA7P">논문을 읽는법</a> 영상은 논문 읽는 효율적인 방법에 대한 팁을 제공합니다. 논문 읽는 것에 정답이 없고 이미 각자의 방법이 있겠으나, 참고하기에 좋은 것 같아 AI 요약본으로 공유합니다.</p>
+</blockquote>
+<p>핵심은 처음부터 모든 내용을 꼼꼼히 읽는 것이 아니라, 자신의 이해도에 맞춰 전략적으로 접근하는 것입니다. 처음에는 <strong>랜드마크 논문</strong> 을 찾아 Introduction과 Related Works를 통해 분야의 큰 그림을 파악하고, 이후에는 Method와 Experiment 중심으로 읽어 나가는 것이 중요합니다. 또한, 논문 에서 감춰진 <strong>한계점</strong> 을 파악하고, 새로운 아이디어를 발견하는 데 집중해야 합니다. 이 영상은 <strong>연구 주제를 설정</strong> 하고 <strong>논문의 완성도</strong> 를 높이는 데 실질적인 도움을 줄 수 있습니다.</p>
+<section id="논문-읽기의-효율적-접근법" class="level3">
+<h3 class="anchored" data-anchor-id="논문-읽기의-효율적-접근법">1. 🔍 논문 읽기의 효율적 접근법</h3>
 <ul>
-<li>MPC를 사용하는 매니퓰레이터와 RL을 사용하는 4족로봇의 통합</li>
-<li>매니퓰레이터가 움직이면, 4족로봇은 그 외란을 예측해서 로봇이 균형을 유지하고 안정적으로 이동할 수 있게 함.</li>
-<li>RL은 매니퓰레이터의 동역학 모델을 직접적으로 사용하지 않음. 시뮬레이션에서 외란을 가해준다음에 MSE를 통해 예측모델을 만드는것임.</li>
+<li>일반적으로 논문 한 편을 쓰기 위해 약 100편의 관련 논문 을 읽어야 하지만, 이는 <strong>학술적 내용과 수식</strong> 때문에 쉽지 않은 과제다.<br>
+</li>
+<li>기존의 논문 읽기 방법(초록, 결론 순으로 읽기)은 빠르게 읽을 수는 있지만, 내용 이해와 기억에는 효과적이지 않다는 것이 밝혀졌다.<br>
+</li>
+<li>효율적인 논문 읽기의 핵심은 정해진 순서가 아닌, <strong>읽는 사람의 이해 수준</strong> 에 따라 접근 방식을 조정하는 것이다.<br>
+</li>
+<li>새로운 연구 분야에 진입할 때는 경험이 전혀 없는 상태에서 시작하므로, 이에 맞는 특별한 접근 방식이 필요하다.</li>
 </ul>
 </section>
-<section id="training-in-simulation" class="level3">
-<h3 class="anchored" data-anchor-id="training-in-simulation">Training in Simulation</h3>
+<section id="랜드마크-논문-찾기-연구의-시작점" class="level3">
+<h3 class="anchored" data-anchor-id="랜드마크-논문-찾기-연구의-시작점">2. 🔍 랜드마크 논문 찾기: 연구의 시작점</h3>
 <ul>
-<li>로봇은 시뮬레이션 환경에서 무작위 힘의 조합인 wrench sequence를 적용받음. 학습과정에서 이 렌치 시퀀스 예측을 수행함.</li>
-<li>학습중에는 별도의 매니퓰레이터 제어기가 필요하지 않음. legged gym에서 push robot과 같은 함수를 지속적으로 가해주는것과 동일함.</li>
+<li>연구 분야의 <strong>랜드마크 </strong> <strong>논문</strong> 을 찾는 것이 논문 읽기의 첫 단계다.<br>
+</li>
+<li>키워드로 검색한 논문의 <strong>Related Works</strong> 섹션을 통해 관련 연구들을 파악할 수 있다.<br>
+</li>
+<li>여러 논문 에서 <strong>공통적으로 인용되는 </strong> <strong>논문</strong> 들을 모아두면 약 10개 정도의 핵심 논문 을 찾을 수 있다.<br>
+</li>
+<li>구글 스칼라에서 <strong>인용 횟수</strong> 를 확인하여 논문의 중요성과 품질을 판단할 수 있다.<br>
+</li>
+<li>랜드마크 논문을 찾았다고 해서 바로 방법론(Methodology)을 읽는 것은 적절하지 않다.</li>
 </ul>
 </section>
-<section id="results" class="level3">
-<h3 class="anchored" data-anchor-id="results">Results</h3>
+<section id="연구-분야의-큰-그림-파악하기" class="level3">
+<h3 class="anchored" data-anchor-id="연구-분야의-큰-그림-파악하기">3. 🔍 연구 분야의 큰 그림 파악하기</h3>
 <ul>
-<li>매니퓰레이터의 다양한 동작과 무게 변화에 대한 적응성이 생김.</li>
-<li>제어 시스템을 4족로봇, 매니퓰레이터 컨트롤러 두개의 모듈로 분리하여 각 모듈의 독립적인 개발 및 최적화를 가능하게 함.</li>
-<li>분명 이전에 이거랑 같은 컨셉인 시뮬레이션 논문이 아카이브에 올라왔었는데 지금은 못찾겠음. 확실히 직관적인 아이디어여도 실제 하드웨어로 실험을 해야 논문이 되는것같다.</li>
-<li><a href="https://arxiv.org/abs/2201.03871">Paper Link</a></li>
+<li>초심자는 개별 논문 의 문제 해결 방식보다 <strong>연구 분야의 전체적인 맥락</strong> 을 먼저 이해해야 한다.<br>
+</li>
+<li>랜드마크 논문 의 <strong>Introduction과 Related Works</strong> 를 자세히 읽어 연구 분야의 큰 방향성을 파악해야 한다.<br>
+</li>
+<li>마치 이야기책을 읽듯이 연구 분야의 흐름을 파악하는 과정은 생각보다 흥미롭다.<br>
+</li>
+<li>여러 논문 을 읽다 보면 <strong>반복되는 내용</strong> 이 나타나는데, 이는 해당 분야의 전반적인 이해를 얻었다는 신호다.<br>
+</li>
+<li>이러한 과정을 통해 연구 분야에서 어떤 일이 일어나고 있는지 대략적으로 파악할 수 있다.</li>
 </ul>
-<p><img src="../../images/2025-02-28-papers/jihongkim_1.png" class="img-fluid"> <img src="../../images/2025-02-28-papers/jihongkim_2.png" class="img-fluid"></p>
 </section>
-</section>
-<section id="foundation-models-in-robotics-applications-challenges-and-the-future" class="level1">
-<h1>Foundation Models in Robotics: Applications, Challenges, and the Future</h1>
+<section id="논문-읽기의-효율적-접근-방법" class="level3">
+<h3 class="anchored" data-anchor-id="논문-읽기의-효율적-접근-방법">4. 🔍 논문 읽기의 효율적 접근 방법</h3>
 <ul>
-<li>강화학습 + MPC 주제쪽으로 보고 있지만 이번에는 관심을 가지고 있는 Foundation model에 대해서 가지고 와봤다. 본 논문은 Foundation model이 로보틱스에서 어떤식으로 활용되어 왔고, 어떻게 연구가 될지에 대해서 논의하는 논문이다. Foundation model을 통해 로봇의 인지, 의사결정, 제어의 능력을 향상시키는 방법을 분석한다.</li>
-<li>특히, 기초 모델을 활용한 로봇 정책 학습과 강화학습의 접점으로 Language-Assisted Reinforcement Learning (LLM 기반 보상 학습 및 탐색), Vision-Language Value Learning (VLM을 활용한 Value Function 학습), Robotics Transformers (Transformer 기반 행동 정책 학습) 등이 제시되었으며, 이는 강화학습 기반의 제어기 설계에 유용할 수 있다.</li>
-<li>다만, 실시간 응답 속도 문제, 데이터 부족, 불확실성 정량화 부족 등의 한계가 존재하며, RL과 MPC를 결합한 제어기 학습을 위한 foundation model의 직접적인 적용 사례는 부족하다. 향후 연구 방향으로 RL과 결합 가능한 경량화된 foundation model 개발 및 로봇 제어 특화된 데이터셋 구축이 필요할 것으로 보인다.</li>
-<li><a href="https://arxiv.org/abs/2312.07843">Paper Link</a></li>
-<li><a href="https://www.youtube.com/watch?v=YUN-ajOxS_o">Youtube</a></li>
+<li>연구 분야의 컨텍스트를 파악한 후에는 <strong>Introduction과 Related Works를 건너뛰고</strong> <strong>Methodology와 Experiment 위주로</strong> 논문 을 읽는다.<br>
+</li>
+<li>여러 논문 의 Introduction과 Related Works는 <strong>비슷한 내용</strong> 을 다루므로, 이미 알고 있는 내용은 생략하고 <strong>문제 해결 방식에 집중</strong> 한다.<br>
+</li>
+<li>이러한 전략적 접근으로 읽어야 할 양이 <strong>절반 이하로 줄어들어</strong> 효율성이 크게 향상된다.<br>
+</li>
+<li>처음부터 끝까지 모든 내용을 꼼꼼히 읽는 대신, 중요한 논문들을 선별하여 <strong>Methodology와 Experiment 위주</strong> 로 읽는다.<br>
+</li>
+<li>이러한 방식으로 논문을 읽다 보면 연구 분야의 <strong>전체적인 흐름과 미해결 문제</strong> 들을 파악할 수 있게 된다.</li>
 </ul>
-<p><img src="../../images/2025-02-28-papers/foundation_model_1.png" class="img-fluid"></p>
+</section>
+<section id="좋은-논문의-조건과-효과적인-논문-읽기-방법" class="level3">
+<h3 class="anchored" data-anchor-id="좋은-논문의-조건과-효과적인-논문-읽기-방법">5. 🔍 좋은 논문의 조건과 효과적인 논문 읽기 방법</h3>
+<ul>
+<li>좋은 논문 은 <strong>노벨티</strong> <strong>(novelty)</strong> 와 <strong>완결성</strong> 이라는 두 가지 요소를 충족해야 한다.<br>
+</li>
+<li>노벨티 는 다른 사람이 시도하지 않은 새롭고 가치 있는 아이디어를 의미하며, 이를 위해서는 기존 연구를 파악해야 한다.<br>
+</li>
+<li>논문 100편을 읽는 진정한 목적은 연구 분야를 이해하고 <strong>좋은 연구 주제</strong> <strong>를 설정</strong> 하기 위함이다.<br>
+</li>
+<li>논문 을 읽을 때는 방법론(Methodology)과 실험(Experiment) 위주로 읽되, 각 방법의 <strong>한계점</strong> 을 파악하는 것이 중요하다.<br>
+</li>
+<li>논문은 밀도 높은 텍스트 이므로, 모든 논문 을 완전히 소화하기보다는 <strong>효율적으로 선별하고 이해</strong> 하는 능력이 중요하다.</li>
+</ul>
 
 
 </section>

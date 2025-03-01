@@ -1,5 +1,5 @@
 ---
-title: "1️⃣ 3mins papers"
+title: "[1] 3mins papers"
 description: "DreamFLEX/RL-augmented MPC/CAIMAN/Safe RL/MPC Testbed"
 date: "2025-02-18"
 categories: [paper, 3mins]
