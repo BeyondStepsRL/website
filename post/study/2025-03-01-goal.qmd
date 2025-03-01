@@ -1,7 +1,7 @@
 ---
 title: "Research Goal"
 description: The list of Conferences/Journals
-date: "2025-02-25"
+date: "2025-03-01"
 categories: [goal]
 image: ../../images/goal.jpg
 toc: true
