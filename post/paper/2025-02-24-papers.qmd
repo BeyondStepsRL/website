@@ -1,5 +1,5 @@
 ---
-title: "3️⃣ 3mins papers"
+title: "[4] 3mins papers"
 description: " / / Small Home Robot /MI-HGNN"
 date: "2025-02-24"
 categories: [paper, 3mins]
