@@ -1,21 +1,11 @@
 ---
 title: "[4] 3mins papers"
-description: " / / Small Home Robot /MI-HGNN"
+description: "Small Home Robot/MI-HGNN"
 date: "2025-02-24"
 categories: [paper, 3mins]
 toc: true
 image: ../../images/3mins.png
 ---
-
-# 
-> 
-
-- 
-- 
-- 
-- [Paper Link]()
-- [Code]()
-
 
 # RLOC: Terrain-Aware Legged Locomotion using Reinforcement Learning and Optimal Control
 > 2020년 논문이지만, 계속해서 Privileged Information 컨셉을 유지하면서, 관련 논문을 찾고 있습니다. 

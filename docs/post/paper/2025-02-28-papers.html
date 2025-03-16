@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-02-28">
-<meta name="description" content="Combining Legged and Manipulator/ Foundation Model / / /">
+<meta name="description" content="Impedance Matching/Combining Legged and Manipulator/Foundation Models">
 
-<title>BSRL - [6] 3mins papers</title>
+<title>BSRL - [5] 3mins papers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,13 +118,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators" id="toc-combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators" class="nav-link active" data-scroll-target="#combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators">Combining Learning-based Locomotion Policy with Model-based Manipulation for Legged Mobile Manipulators</a>
-  <ul class="collapse">
-  <li><a href="#줄요약" id="toc-줄요약" class="nav-link" data-scroll-target="#줄요약">3줄요약</a></li>
-  <li><a href="#training-in-simulation" id="toc-training-in-simulation" class="nav-link" data-scroll-target="#training-in-simulation">Training in Simulation</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  </ul></li>
-  <li><a href="#foundation-models-in-robotics-applications-challenges-and-the-future" id="toc-foundation-models-in-robotics-applications-challenges-and-the-future" class="nav-link" data-scroll-target="#foundation-models-in-robotics-applications-challenges-and-the-future">Foundation Models in Robotics: Applications, Challenges, and the Future</a></li>
+  <li><a href="#impedance-matching" id="toc-impedance-matching" class="nav-link active" data-scroll-target="#impedance-matching">Impedance Matching</a></li>
+  <li><a href="#combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators" id="toc-combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators" class="nav-link" data-scroll-target="#combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators">Combining Learning-based Locomotion Policy with Model-based Manipulation for Legged Mobile Manipulators</a></li>
+  <li><a href="#foundation-models-in-robotics" id="toc-foundation-models-in-robotics" class="nav-link" data-scroll-target="#foundation-models-in-robotics">Foundation Models in Robotics</a></li>
   </ul>
 </nav>
     </div>
@@ -133,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">[6] 3mins papers</h1>
+<h1 class="title">[5] 3mins papers</h1>
   <div class="quarto-categories">
     <div class="quarto-category">paper</div>
     <div class="quarto-category">3mins</div>
@@ -142,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Combining Legged and Manipulator/ Foundation Model / / /
+    Impedance Matching/Combining Legged and Manipulator/Foundation Models
   </div>
 </div>
 
@@ -165,36 +161,36 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="impedance-matching" class="level1">
+<h1>Impedance Matching</h1>
+<blockquote class="blockquote">
+<p>Enabling an RL-Based Running Jump in a Quadruped Robot</p>
+</blockquote>
+<ul>
+<li>강화학습(Reinforcement Learning, RL)을 활용하여 사족보행 로봇의 점프 동작을 구현하는 동시에, 시뮬레이션-현실 간의 성능 차이(sim-to-real gap)를 줄이는 새로운 기법을 제안함. 이를 위해서 주파수 영역에서의 임피던스 매칭 기법을 활용하였음</li>
+<li>기존의 연구는 Domain gap, 무작위의 Domain randomization, 하나의 정책(점프 등)만을 학습, model-based의 reference motion을 참조 등이 필요했으나 본 연구에서는 임피던스 매칭 기법을 통해 Domain gap을 줄이고 reference없이 다양한 모션들을 수행할 수 있는 학습 방법을 제안함</li>
+<li>지금까지의 연구에서는 점프 모션의 경우, model-based controller나 reference를 활용학습하는 것이 일반적이었으나, 본 논문은 순수 강화학습만으로 55cm의 거리를 점프하는 모습을 보임. 매우 흥미로워서 좀 더 깊이 파보고자 함.</li>
+<li><a href="https://arxiv.org/pdf/2404.15096">Paper Link</a></li>
+</ul>
+<p><img src="../../images/2025-02-26-papers /KakaoTalk_20250226_235549458.png" class="img-fluid"></p>
+</section>
 <section id="combining-learning-based-locomotion-policy-with-model-based-manipulation-for-legged-mobile-manipulators" class="level1">
 <h1>Combining Learning-based Locomotion Policy with Model-based Manipulation for Legged Mobile Manipulators</h1>
-<section id="줄요약" class="level3">
-<h3 class="anchored" data-anchor-id="줄요약">3줄요약</h3>
+<p><strong>3줄요약</strong></p>
 <ul>
 <li>MPC를 사용하는 매니퓰레이터와 RL을 사용하는 4족로봇의 통합</li>
 <li>매니퓰레이터가 움직이면, 4족로봇은 그 외란을 예측해서 로봇이 균형을 유지하고 안정적으로 이동할 수 있게 함.</li>
 <li>RL은 매니퓰레이터의 동역학 모델을 직접적으로 사용하지 않음. 시뮬레이션에서 외란을 가해준다음에 MSE를 통해 예측모델을 만드는것임.</li>
 </ul>
-</section>
-<section id="training-in-simulation" class="level3">
-<h3 class="anchored" data-anchor-id="training-in-simulation">Training in Simulation</h3>
-<ul>
-<li>로봇은 시뮬레이션 환경에서 무작위 힘의 조합인 wrench sequence를 적용받음. 학습과정에서 이 렌치 시퀀스 예측을 수행함.</li>
-<li>학습중에는 별도의 매니퓰레이터 제어기가 필요하지 않음. legged gym에서 push robot과 같은 함수를 지속적으로 가해주는것과 동일함.</li>
-</ul>
-</section>
-<section id="results" class="level3">
-<h3 class="anchored" data-anchor-id="results">Results</h3>
-<ul>
-<li>매니퓰레이터의 다양한 동작과 무게 변화에 대한 적응성이 생김.</li>
-<li>제어 시스템을 4족로봇, 매니퓰레이터 컨트롤러 두개의 모듈로 분리하여 각 모듈의 독립적인 개발 및 최적화를 가능하게 함.</li>
-<li>분명 이전에 이거랑 같은 컨셉인 시뮬레이션 논문이 아카이브에 올라왔었는데 지금은 못찾겠음. 확실히 직관적인 아이디어여도 실제 하드웨어로 실험을 해야 논문이 되는것같다.</li>
-<li><a href="https://arxiv.org/abs/2201.03871">Paper Link</a></li>
-</ul>
+<p><strong>Training in Simulation</strong> - 로봇은 시뮬레이션 환경에서 무작위 힘의 조합인 wrench sequence를 적용받음. 학습과정에서 이 렌치 시퀀스 예측을 수행함. - 학습중에는 별도의 매니퓰레이터 제어기가 필요하지 않음. legged gym에서 push robot과 같은 함수를 지속적으로 가해주는것과 동일함.</p>
+<p><strong>Results</strong> - 매니퓰레이터의 다양한 동작과 무게 변화에 대한 적응성이 생김. - 제어 시스템을 4족로봇, 매니퓰레이터 컨트롤러 두개의 모듈로 분리하여 각 모듈의 독립적인 개발 및 최적화를 가능하게 함. - 분명 이전에 이거랑 같은 컨셉인 시뮬레이션 논문이 아카이브에 올라왔었는데 지금은 못찾겠음. 확실히 직관적인 아이디어여도 실제 하드웨어로 실험을 해야 논문이 되는것같다. - <a href="https://arxiv.org/abs/2201.03871">Paper Link</a></p>
 <p><img src="../../images/2025-02-28-papers/jihongkim_1.png" class="img-fluid"> <img src="../../images/2025-02-28-papers/jihongkim_2.png" class="img-fluid"></p>
 </section>
-</section>
-<section id="foundation-models-in-robotics-applications-challenges-and-the-future" class="level1">
-<h1>Foundation Models in Robotics: Applications, Challenges, and the Future</h1>
+<section id="foundation-models-in-robotics" class="level1">
+<h1>Foundation Models in Robotics</h1>
+<blockquote class="blockquote">
+<p>Applications, Challenges, and the Future</p>
+</blockquote>
 <ul>
 <li>강화학습 + MPC 주제쪽으로 보고 있지만 이번에는 관심을 가지고 있는 Foundation model에 대해서 가지고 와봤다. 본 논문은 Foundation model이 로보틱스에서 어떤식으로 활용되어 왔고, 어떻게 연구가 될지에 대해서 논의하는 논문이다. Foundation model을 통해 로봇의 인지, 의사결정, 제어의 능력을 향상시키는 방법을 분석한다.</li>
 <li>특히, 기초 모델을 활용한 로봇 정책 학습과 강화학습의 접점으로 Language-Assisted Reinforcement Learning (LLM 기반 보상 학습 및 탐색), Vision-Language Value Learning (VLM을 활용한 Value Function 학습), Robotics Transformers (Transformer 기반 행동 정책 학습) 등이 제시되었으며, 이는 강화학습 기반의 제어기 설계에 유용할 수 있다.</li>

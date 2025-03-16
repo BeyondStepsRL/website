@@ -3,7 +3,7 @@ title: "How to read papers"
 description: 논문 읽는 법에 관한 영상 요약
 date: "2025-03-01"
 categories: [etc]
-image: ../../asset/default_img.png
+image: ../../images/default.jpg
 toc: true
 ---
 

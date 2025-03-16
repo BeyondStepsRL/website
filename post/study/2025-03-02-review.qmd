@@ -1,9 +1,9 @@
 ---
 title: "Learning robust perceptive locomotion for quadrupedal robots in the wild"
 description: tbai 2nd paper review
-date: "2025-03-01"
+date: "2025-03-02"
 categories: [review]
-image: ../../images/review.jpg
+image: ../../images/2025-03-01-review/image-20250301163322598.png
 toc: true
 author: "Jungyeon Lee"
 format: 
