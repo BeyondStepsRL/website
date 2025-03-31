@@ -5,6 +5,7 @@ listing:
   contents: 
     - "post/paper/*.qmd"
     - "post/study/*.qmd"
+    - "post/meeting/*.qmd"
   sort: "date desc"
   type: default
   table-striped: true
