@@ -1,0 +1,42 @@
+---
+title: "250329 회의록"
+description: 25.03.29일자 Discussion 기록
+date: "2025-03-29"
+categories: [meeting]
+image: ../../images/default.jpg
+Author: JungYeon Lee
+toc: true
+---
+
+Attendee: JungYeon Lee,  Jihong Kim
+
+# Main 
+
+- 저번주 아이디어 디벨롭 부분 공유
+
+  - s_t로 얻어내는 policy를 활용할 수 있는 방안 찾기
+
+  ![](../../images/2025-03-29-meeting-note/image-20250331124017778.png)
+
+- PPO 에서 importance sampling 하는 부분을 간단하게 policy 1, 2로 대체하는 건 어떨까?
+
+  - $$ r_t = \frac{\pi(a_t \mid s_t)}{\pi_\text{old}(a_t \mid s_t)} $$
+  - $$ r_t = \frac{\pi_2(a_t \mid s_t)}{\pi_1(a_t \mid s_t)} $$
+
+  
+
+# Next
+
+- 도커로 IsaacSim/Lab 설치 진행(@ Jinwon Kim)
+- quadruped_sim2sim([https://github.com/evronix/quadruped_sim2sim](https://github.com/evronix/quadruped_sim2sim)) 코드 공유 (@Jihong Kim)
+- [Diffusion paper](https://beyondstepsrl.github.io/website/post/study/2025-03-22-diffusion-map.html) 내용 공유
+- Off-poilcy RL VS. Offline RL 비교 내용 공유 (@Chanwoo Park)
+
+
+
+# Agenda
+
+- 모임 일정 조정 필요
+
+
+### 
