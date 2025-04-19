@@ -1,6 +1,6 @@
 ---
-title: "[IsaacLab] 03. Task 설계 구조의 이해"
-description: IsaacLab 학습 프레임워크 구조 이해
+title: "[IsaacLab] 03. Task 설계 구조의 이해 part1"
+description: 예제 코드를 통한 구현 방법의 차이 이해
 author: Jinwon Kim
 author-meta: mqjinwon@gmail.com
 date: "2025-04-19"
