@@ -3,7 +3,7 @@ title: "[IsaacLab] 01. 환경 설정"
 description: Docker를 활용한 IsaacLab 환경 설정
 author: Jinwon Kim
 author-meta: mqjinwon@gmail.com
-date: "2025-04-19"
+date: "2025-04-19T17:00:00"
 categories: [IsaacLab, Docker, Setting, RL, WebRTC]
 image: ../../images/2025-04-19-IsaacLab-setting/f2137db8-ef81-4a1e-b948-019c4b6040d8.jpeg
 toc: true

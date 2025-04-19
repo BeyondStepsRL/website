@@ -3,7 +3,7 @@ title: "[IsaacLab] 02. 개발 세팅 및 예제 실행"
 description: vscode 환경 설정 및 학습 예제 실행
 author: Jinwon Kim
 author-meta: mqjinwon@gmail.com
-date: "2025-04-19"
+date: "2025-04-19T17:33:00"
 categories: [IsaacLab, Docker, Setting, RL, vscode]
 image: ../../images/2025-04-19-IsaacLab-setting/f2137db8-ef81-4a1e-b948-019c4b6040d8.jpeg
 toc: true

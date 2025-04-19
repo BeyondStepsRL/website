@@ -3,7 +3,7 @@ title: "[IsaacLab] 03. Task 설계 구조의 이해 part1"
 description: 예제 코드를 통한 구현 방법의 차이 이해
 author: Jinwon Kim
 author-meta: mqjinwon@gmail.com
-date: "2025-04-19"
+date: "2025-04-19T17:40:00"
 categories: [IsaacLab, RL, Task Design]
 image: ../../images/2025-04-19-IsaacLab-setting/f2137db8-ef81-4a1e-b948-019c4b6040d8.jpeg
 toc: true
