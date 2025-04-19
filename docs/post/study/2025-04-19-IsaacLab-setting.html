@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="김진원">
+<meta name="author" content="mqjinwon@gmail.com">
 <meta name="dcterms.date" content="2025-04-19">
 <meta name="description" content="Docker를 활용한 IsaacLab 환경 설정">
 
@@ -192,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>김진원 </p>
+             <p>Jinwon Kim </p>
           </div>
   </div>
     
@@ -220,8 +220,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>이 문서에서는 Docker를 활용하여 IsaacLab 환경을 설정하고, WebRTC를 통해 같은 네트워크 내에서 시각화하는 방법을 설명합니다.</p>
 </blockquote>
-<section id="사전-준비사항" class="level1">
-<h1>사전 준비사항</h1>
+<section id="사전-준비사항" class="level2">
+<h2 class="anchored" data-anchor-id="사전-준비사항">사전 준비사항</h2>
 <ul>
 <li>Docker 및 NVIDIA Container Toolkit 설치
 <ul>
@@ -234,8 +234,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="isaaclab-설치-방법" class="level1">
-<h1>IsaacLab 설치 방법</h1>
+<section id="isaaclab-설치-방법" class="level2">
+<h2 class="anchored" data-anchor-id="isaaclab-설치-방법">IsaacLab 설치 방법</h2>
 <p>IsaacLab 설치는 Docker를 통해 세 가지 방법으로 가능합니다:</p>
 <ol type="1">
 <li><a href="#1-isaacsim-docker에서-직접-설치">IsaacSim Docker에서 직접 설치</a></li>
@@ -243,8 +243,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#3-사전-빌드된-isaaclab-docker-이미지-활용">사전 빌드된 IsaacLab Docker 이미지 활용</a></li>
 </ol>
 <p>각 방법을 자세히 설명하겠습니다.</p>
-<section id="isaacsim-docker에서-직접-설치" class="level2">
-<h2 class="anchored" data-anchor-id="isaacsim-docker에서-직접-설치">1. IsaacSim Docker에서 직접 설치</h2>
+<section id="isaacsim-docker에서-직접-설치" class="level3">
+<h3 class="anchored" data-anchor-id="isaacsim-docker에서-직접-설치">1. IsaacSim Docker에서 직접 설치</h3>
 <ol type="1">
 <li><p><strong>Isaac-sim 컨테이너 생성</strong></p>
 <p>메모리 누수 문제를 방지하기 위해 메모리와 CPU를 제한합니다. 컴퓨터 사양에 맞게 조절하세요.</p>
@@ -303,8 +303,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ol>
 </section>
-<section id="isaaclab의-docker-compose-파일-활용" class="level2">
-<h2 class="anchored" data-anchor-id="isaaclab의-docker-compose-파일-활용">2. IsaacLab의 Docker-compose 파일 활용</h2>
+<section id="isaaclab의-docker-compose-파일-활용" class="level3">
+<h3 class="anchored" data-anchor-id="isaaclab의-docker-compose-파일-활용">2. IsaacLab의 Docker-compose 파일 활용</h3>
 <ol type="1">
 <li><p><strong>IsaacLab repo 설치 (version 2.0.2 사용)</strong></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">git clone &lt;https://github.com/isaac-sim/IsaacLab.git&gt; -b v2.0.2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
@@ -347,8 +347,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./docker/container.py</span> start</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 </section>
-<section id="사전-빌드된-isaaclab-docker-이미지-활용" class="level2">
-<h2 class="anchored" data-anchor-id="사전-빌드된-isaaclab-docker-이미지-활용">3. 사전 빌드된 IsaacLab Docker 이미지 활용</h2>
+<section id="사전-빌드된-isaaclab-docker-이미지-활용" class="level3">
+<h3 class="anchored" data-anchor-id="사전-빌드된-isaaclab-docker-이미지-활용">3. 사전 빌드된 IsaacLab Docker 이미지 활용</h3>
 <p>사전 빌드된 컨테이너를 사용하여 로컬 빌드 없이 NGC에서 직접 가져올 수 있습니다. 이 컨테이너는 헤드리스 실행 전용입니다.</p>
 <ul>
 <li><p>docker pull 명령어</p>
@@ -368,8 +368,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="isaacsim-webrtc을-활용한-visualization" class="level1">
-<h1>IsaacSim WebRTC을 활용한 Visualization</h1>
+<section id="isaacsim-webrtc을-활용한-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="isaacsim-webrtc을-활용한-visualization">IsaacSim WebRTC을 활용한 Visualization</h2>
 <p>위 3가지 방법을 통하여 설치한 컨테이너에서 서버를 실행하게 되면, client에서는 이에 붙어 interaction을 수행할 수 있습니다.</p>
 <ol type="1">
 <li><p><strong>host에서 webrtc client를 실행합니다.</strong> ​ <img src="../../images/2025-04-19-IsaacLab-setting/image-20250419144440818.png" class="img-fluid" alt="WebRTC Client Image"> ​ host에서 webrtc client를 실행합니다. 서버에서 실행한 IP로 변경 후 연결 버튼을 누릅니다. 서버와 클라이언트가 같은 곳에서 실행 중이라면 localhost인 127.0.0.1을 사용합니다.</p></li>
@@ -383,8 +383,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="reference" class="level1">
-<h1>Reference</h1>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
 <ul>
 <li><a href="https://isaac-sim.github.io/IsaacLab/main/source/deployment/docker.html#docker-guide">IsaacLab Docker 설치 가이드</a></li>
 <li><a href="https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/download.html#isaac-sim-latest-release">IsaacSim WebRTC 설치 가이드</a></li>

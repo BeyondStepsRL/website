@@ -1,0 +1,24 @@
+---
+title: "[IsaacLab] 03. Task 설계 구조의 이해"
+description: IsaacLab 학습 프레임워크 구조 이해
+author: Jinwon Kim
+author-meta: mqjinwon@gmail.com
+date: "2025-04-19"
+categories: [IsaacLab, RL, Task Design]
+image: ../../images/2025-04-19-IsaacLab-setting/f2137db8-ef81-4a1e-b948-019c4b6040d8.jpeg
+toc: true
+---
+
+> 이 문서에서는 IsaacLab 학습 프레임워크 구조 이해를 위한 기본적인 내용을 설명합니다. 본 문서는 [Task Design Workflows](https://isaac-sim.github.io/IsaacLab/main/source/overview/core-concepts/task_workflows.html) 문서를 참고하여 작성되었습니다.
+
+## Introduction
+
+## Manager-Based Environments
+
+## Direct Environments
+
+## References
+
+- [Task Design Workflows](https://isaac-sim.github.io/IsaacLab/main/source/overview/core-concepts/task_workflows.html)
+- [IsaacSim](https://isaac-sim.github.io/IsaacSim/)
+- [IsaacLab](https://isaac-sim.github.io/IsaacLab/)

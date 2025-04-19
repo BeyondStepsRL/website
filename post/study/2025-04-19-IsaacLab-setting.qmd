@@ -1,7 +1,8 @@
 ---
 title: "[IsaacLab] 01. 환경 설정"
 description: Docker를 활용한 IsaacLab 환경 설정
-author: 김진원
+author: Jinwon Kim
+author-meta: mqjinwon@gmail.com
 date: "2025-04-19"
 categories: [IsaacLab, Docker, Setting, RL, WebRTC]
 image: ../../images/2025-04-19-IsaacLab-setting/f2137db8-ef81-4a1e-b948-019c4b6040d8.jpeg
@@ -12,7 +13,7 @@ toc: true
 
 > 이 문서에서는 Docker를 활용하여 IsaacLab 환경을 설정하고, WebRTC를 통해 같은 네트워크 내에서 시각화하는 방법을 설명합니다.
 
-# 사전 준비사항
+## 사전 준비사항
 
 - Docker 및 NVIDIA Container Toolkit 설치
   - [Docker 설치 가이드](https://docs.docker.com/engine/install/ubuntu/)
@@ -20,7 +21,7 @@ toc: true
 - IsaacSim WebRTC 설치
   - [IsaacSim WebRTC Streaming Client](https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/download.html#latest-release)
 
-# IsaacLab 설치 방법
+## IsaacLab 설치 방법
 
 IsaacLab 설치는 Docker를 통해 세 가지 방법으로 가능합니다:
 
@@ -30,7 +31,7 @@ IsaacLab 설치는 Docker를 통해 세 가지 방법으로 가능합니다:
 
 각 방법을 자세히 설명하겠습니다.
 
-## 1. IsaacSim Docker에서 직접 설치
+### 1. IsaacSim Docker에서 직접 설치
 
 1. **Isaac-sim 컨테이너 생성**
 
@@ -107,7 +108,7 @@ IsaacLab 설치는 Docker를 통해 세 가지 방법으로 가능합니다:
         cd /IsaacLab && ./isaaclab.sh --install
         ```
 
-## 2. IsaacLab의 Docker-compose 파일 활용
+### 2. IsaacLab의 Docker-compose 파일 활용
 
 1. **IsaacLab repo 설치 (version 2.0.2 사용)**
 
@@ -171,7 +172,7 @@ IsaacLab 설치는 Docker를 통해 세 가지 방법으로 가능합니다:
     ./docker/container.py start
     ```
 
-## 3. 사전 빌드된 IsaacLab Docker 이미지 활용
+### 3. 사전 빌드된 IsaacLab Docker 이미지 활용
 
 사전 빌드된 컨테이너를 사용하여 로컬 빌드 없이 NGC에서 직접 가져올 수 있습니다. 이 컨테이너는 헤드리스 실행 전용입니다.
 
@@ -198,7 +199,7 @@ IsaacLab 설치는 Docker를 통해 세 가지 방법으로 가능합니다:
     ```
 
 
-# IsaacSim WebRTC을 활용한 Visualization
+## IsaacSim WebRTC을 활용한 Visualization
 
 위 3가지 방법을 통하여 설치한 컨테이너에서 서버를 실행하게 되면, client에서는 이에 붙어 interaction을 수행할 수 있습니다.
 
@@ -222,7 +223,7 @@ IsaacLab 설치는 Docker를 통해 세 가지 방법으로 가능합니다:
 
 
 
-# Reference
+## Reference
 
 - [IsaacLab Docker 설치 가이드](https://isaac-sim.github.io/IsaacLab/main/source/deployment/docker.html#docker-guide)
 - [IsaacSim WebRTC 설치 가이드](https://docs.isaacsim.omniverse.nvidia.com/4.5.0/installation/download.html#isaac-sim-latest-release)
