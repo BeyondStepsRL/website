@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/competition.html",
+    "items": [
+      "/post/competition/icros2025/2025-05-06-icros2025-structure.html",
+      "/post/competition/icros2025/2025-05-06-icros2025-intro.html"
+    ]
+  },
+  {
     "listing": "/post.html",
     "items": [
       "/post/study/2025-04-19-IsaacLab-task-design-part2.html",
@@ -16,12 +23,6 @@
       "/post/paper/2025-02-20-papers.html",
       "/post/paper/2025-02-18-papers.html",
       "/post/study/2025-02-17-mpc.html"
-    ]
-  },
-  {
-    "listing": "/competition.html",
-    "items": [
-      "/post/competition/icros2025/2025-05-06-icros2025-intro.html"
     ]
   }
 ]

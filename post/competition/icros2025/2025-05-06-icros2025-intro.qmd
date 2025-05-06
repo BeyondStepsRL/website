@@ -1,5 +1,5 @@
 ---
-title: "1. icros2025 4족보행 대회 소개"
+title: "[icros2025] 1. 4족보행 대회 소개"
 description: icros2025 4족보행 대회 소개
 author: Jinwon Kim
 author-meta: mqjinwon@gmail.com

@@ -8,9 +8,9 @@
 
 <meta name="author" content="mqjinwon@gmail.com">
 <meta name="dcterms.date" content="2025-05-06">
-<meta name="description" content="icros2025 4족보행 대회 소개">
+<meta name="description" content="icros2025 프로젝트 개념도">
 
-<title>[icros2025] 1. 4족보행 대회 소개 – BSRL</title>
+<title>[icros2025] 2. 프로젝트 개념도 – BSRL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -123,17 +126,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#개요" id="toc-개요" class="nav-link active" data-scroll-target="#개요">개요</a></li>
-  <li><a href="#icros-2025-4족보행로봇-챌린지-원격-조종-부문-규정-요약" id="toc-icros-2025-4족보행로봇-챌린지-원격-조종-부문-규정-요약" class="nav-link" data-scroll-target="#icros-2025-4족보행로봇-챌린지-원격-조종-부문-규정-요약">ICROS 2025 4족보행로봇 챌린지: 원격 조종 부문 규정 요약</a>
+  <li><a href="#사족보행-로봇-대회-준비-프로젝트-페이지" id="toc-사족보행-로봇-대회-준비-프로젝트-페이지" class="nav-link active" data-scroll-target="#사족보행-로봇-대회-준비-프로젝트-페이지">사족보행 로봇 대회 준비 프로젝트 페이지</a>
   <ul class="collapse">
-  <li><a href="#대회-개요-및-참가-조건" id="toc-대회-개요-및-참가-조건" class="nav-link" data-scroll-target="#대회-개요-및-참가-조건">1. 대회 개요 및 참가 조건</a></li>
-  <li><a href="#로봇-및-장비-규정" id="toc-로봇-및-장비-규정" class="nav-link" data-scroll-target="#로봇-및-장비-규정">2. 로봇 및 장비 규정</a></li>
-  <li><a href="#경기-진행-및-점수" id="toc-경기-진행-및-점수" class="nav-link" data-scroll-target="#경기-진행-및-점수">3. 경기 진행 및 점수</a></li>
-  <li><a href="#트랙-및-장애물" id="toc-트랙-및-장애물" class="nav-link" data-scroll-target="#트랙-및-장애물">4. 트랙 및 장애물</a></li>
-  <li><a href="#심판-및-운영" id="toc-심판-및-운영" class="nav-link" data-scroll-target="#심판-및-운영">5. 심판 및 운영</a></li>
-  <li><a href="#대회-일정-2025년-기준" id="toc-대회-일정-2025년-기준" class="nav-link" data-scroll-target="#대회-일정-2025년-기준">6. 대회 일정 (2025년 기준)</a></li>
+  <li><a href="#개요" id="toc-개요" class="nav-link" data-scroll-target="#개요">1. 개요</a></li>
+  <li><a href="#팀-구성" id="toc-팀-구성" class="nav-link" data-scroll-target="#팀-구성">2. 팀 구성</a></li>
+  <li><a href="#시스템-아키텍처" id="toc-시스템-아키텍처" class="nav-link" data-scroll-target="#시스템-아키텍처">3. 시스템 아키텍처</a></li>
+  <li><a href="#시퀀스-다이어그램" id="toc-시퀀스-다이어그램" class="nav-link" data-scroll-target="#시퀀스-다이어그램">4. 시퀀스 다이어그램</a></li>
+  <li><a href="#클래스-다이어그램-ros2-노드-기준" id="toc-클래스-다이어그램-ros2-노드-기준" class="nav-link" data-scroll-target="#클래스-다이어그램-ros2-노드-기준">5. 클래스 다이어그램 (ROS2 노드 기준)</a></li>
+  <li><a href="#일정-gantt" id="toc-일정-gantt" class="nav-link" data-scroll-target="#일정-gantt">6. 일정 (Gantt)</a></li>
+  <li><a href="#주별-칸반-보드-책임" id="toc-주별-칸반-보드-책임" class="nav-link" data-scroll-target="#주별-칸반-보드-책임">7. 주별 칸반 보드 &amp; 책임</a></li>
   </ul></li>
-  <li><a href="#참고-및-추가-안내" id="toc-참고-및-추가-안내" class="nav-link" data-scroll-target="#참고-및-추가-안내">참고 및 추가 안내</a></li>
   </ul>
 </nav>
     </div>
@@ -142,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">[icros2025] 1. 4족보행 대회 소개</h1>
+<h1 class="title">[icros2025] 2. 프로젝트 개념도</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Competition</div>
     <div class="quarto-category">legged-robot</div>
@@ -151,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    icros2025 4족보행 대회 소개
+    icros2025 프로젝트 개념도
   </div>
 </div>
 
@@ -180,301 +182,327 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="사족보행-로봇-대회-준비-프로젝트-페이지" class="level1">
+<h1>사족보행 로봇 대회 준비 프로젝트 페이지</h1>
 <section id="개요" class="level2">
-<h2 class="anchored" data-anchor-id="개요">개요</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../../images/2025-05-06-icros2025-intro/4족-보행-로봇-경진대회-포스터_1차-scaled.jpg" class="img-fluid figure-img"></p>
-<figcaption>포스터 사진</figcaption>
-</figure>
-</div>
-<p>이번 대회는 사족보행로봇의 자율주행 및 원격조종 부분의 성능을 겨루는 장으로, 참가자들은 주어진 규정에 따라 각자의 로봇을 설계하고 조종하게 됩니다. 저희 팀은 <strong>“원격 조종”</strong> 파트에 참가하여, 직접 조종하는 방식으로 미션을 수행할 예정입니다. 대회 주요 규정은 아래 표에 정리하였습니다.</p>
-<hr>
+<h2 class="anchored" data-anchor-id="개요">1. 개요</h2>
+<p>본 페이지는 2025년 6월 25일까지 진행되는 사족보행 로봇(Unitree Go1) 대회 준비 과정을 정리합니다. 시스템 아키텍처, 주요 다이어그램, 일정, 주별 작업 분배 등을 포함하여 팀원들이 한눈에 전체 진행 상황을 파악하도록 구성했습니다.</p>
 </section>
-<section id="icros-2025-4족보행로봇-챌린지-원격-조종-부문-규정-요약" class="level2">
-<h2 class="anchored" data-anchor-id="icros-2025-4족보행로봇-챌린지-원격-조종-부문-규정-요약">ICROS 2025 4족보행로봇 챌린지: 원격 조종 부문 규정 요약</h2>
-<section id="대회-개요-및-참가-조건" class="level3">
-<h3 class="anchored" data-anchor-id="대회-개요-및-참가-조건">1. 대회 개요 및 참가 조건</h3>
+<section id="팀-구성" class="level2">
+<h2 class="anchored" data-anchor-id="팀-구성">2. 팀 구성</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 86%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>항목</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>대회명</td>
-<td>ICROS 2025 4족보행로봇 챌린지</td>
-</tr>
-<tr class="even">
-<td>주제</td>
-<td>4족 보행 로봇을 이용한 일상 생활 미션 수행</td>
-</tr>
-<tr class="odd">
-<td>참가 자격</td>
-<td>팀장 1명 + 팀원 최대 3명 (총 4명, 초과시 운영측 문의)</td>
-</tr>
-<tr class="even">
-<td>등록</td>
-<td>ICROS 2025 학회 등록 + 대회 홈페이지 구글 폼 등록</td>
-</tr>
-<tr class="odd">
-<td>로봇 소유</td>
-<td>각 팀은 고유한 로봇 1대 보유 (공유 불가)</td>
-</tr>
-<tr class="even">
-<td>부문 선택</td>
-<td>자율 주행 / 원격 조종 중 택1 (저희 팀은 원격 조종)</td>
-</tr>
-<tr class="odd">
-<td>대회 장소</td>
-<td>전북대 컨벤션센터 지하 1층 102호</td>
-</tr>
-<tr class="even">
-<td>대회 방식</td>
-<td>오프라인 현장 대회 (기기 검사 → 예선 → 본선)</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="로봇-및-장비-규정" class="level3">
-<h3 class="anchored" data-anchor-id="로봇-및-장비-규정">2. 로봇 및 장비 규정</h3>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 86%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>항목</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>로봇 규격</td>
-<td>가로 70~85cm, 폭 30~40cm, 높이 35~45cm</td>
-</tr>
-<tr class="even">
-<td>동작 전원</td>
-<td>온보드 배터리(15000mAh 이하, 안전검사 통과)</td>
-</tr>
-<tr class="odd">
-<td>센서</td>
-<td>온보드/고정 센서만 사용, 외부 데이터 전송 금지</td>
-</tr>
-<tr class="even">
-<td>무선통신</td>
-<td>무선 공유기 사용 가능(SSID는 팀명), 운영 방해 시 제한 가능</td>
-</tr>
-<tr class="odd">
-<td>조종 콘솔</td>
-<td>운영측 공간 내, 최대 2명 조종자, 외부 정보 제공 금지</td>
-</tr>
-<tr class="even">
-<td>외부장치</td>
-<td>외부 센서/컴퓨팅/제어 금지(응급상황 제외)</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="경기-진행-및-점수" class="level3">
-<h3 class="anchored" data-anchor-id="경기-진행-및-점수">3. 경기 진행 및 점수</h3>
-<section id="예선" class="level4">
-<h4 class="anchored" data-anchor-id="예선">예선</h4>
-<table class="caption-top table">
-<colgroup>
+<col style="width: 21%">
 <col style="width: 9%">
-<col style="width: 90%">
+<col style="width: 69%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>항목</th>
-<th>내용</th>
+<th>역할</th>
+<th>인원</th>
+<th>주요 책임</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>방식</td>
-<td>트랙 내 출발~도착, 순서대로 코스 통과, 연습 가능</td>
+<td>화면/뷰어 개발</td>
+<td>(이름)</td>
+<td>Viewer UI, 버튼, 조이스틱 통합</td>
 </tr>
 <tr class="even">
-<td>점수</td>
-<td>원격 조종 완주 60점, 자율주행 완주 120점, 코스별 점수, 미완주 시 위치 기준 점수<br><strong>예선 ( 6 &gt; 5 &gt; 4 &gt; 3 &gt; 2 &gt; 1 )</strong> <br>원격 조종: 완주 성공 시 60점 부여됩니다. <br>자율 주행 시: 완주 성공 시 120점 부여됩니다.</td>
+<td>제어기 학습</td>
+<td>(이름)</td>
+<td>통합·Falldown 제어기 학습 (2개로 구성), 네트워크 export 및 코드 최적화</td>
 </tr>
 <tr class="odd">
-<td>순위</td>
-<td>점수 → 시간 순, 동점시 시간 우선</td>
+<td>하드웨어/네트워크</td>
+<td>(이름)</td>
+<td>ORIN 장착, Router 구성(mesho 망), 전원/열 관리</td>
 </tr>
 <tr class="even">
-<td>재시도</td>
-<td>팀당 부여 시간 내 재시도(재부팅) 가능</td>
-</tr>
-<tr class="odd">
-<td>개입</td>
-<td>트랙 내 참가자 개입 시 무효, 재시도</td>
+<td>통합·PM</td>
+<td>(이름)</td>
+<td>전체 일정 관리, 시스템 통합, 테스트</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="본선" class="level4">
-<h4 class="anchored" data-anchor-id="본선">본선</h4>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 90%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>항목</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>방식</td>
-<td>예선전 순위의 역순으로 진행. 배달 미션(바구니+물품), 출발~도착, 장애물 통과</td>
-</tr>
-<tr class="even">
-<td>점수</td>
-<td>원격 조종 완주 100점, 자율주행 완주 200점, 코스별 점수, 미완주 시 위치/물품 기준 점수<br><strong>본선 ( 4 &gt; 3 &gt; 2 &gt; 1 &gt; 1 &gt; 2 &gt; 3 &gt; 4 &gt; 5 &gt; 6)</strong> <br>원격 조종: 완주 성공 시 100점이 부여됩니다. <br>자율 주행 시: 완주 성공 시 200점이 부여됩니다. <br>배달 물품: 배달 물품이 바닥에 떨어지는 경우 개수에 따라 -1점 페널티가 적용 됩니다.</td>
-</tr>
-<tr class="odd">
-<td>페널티</td>
-<td>배달 물품 낙하 시 개당 -1점, 장애물 충돌 시 패널티</td>
-</tr>
-<tr class="even">
-<td>순위</td>
-<td>점수 → 배달 물품 개수 → 시간 → 도착 위치 순</td>
-</tr>
-<tr class="odd">
-<td>재시도</td>
-<td>팀당 부여 시간 내 재시도(재부팅) 가능</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-</section>
-<section id="트랙-및-장애물" class="level3">
-<h3 class="anchored" data-anchor-id="트랙-및-장애물">4. 트랙 및 장애물</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../../images/2025-05-06-icros2025-intro/image-20250506220354959.png" class="img-fluid figure-img"></p>
-<figcaption>image-20250506220354959</figcaption>
-</figure>
+<section id="시스템-아키텍처" class="level2">
+<h2 class="anchored" data-anchor-id="시스템-아키텍처">3. 시스템 아키텍처</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    subgraph REMOTE [**원격**]
+        Joy[Joystick]
+        Laptop[노트북&lt;br/&gt;Viewer + Buttons]
+        Router1((AX3000M&lt;br/&gt;Router 1))
+    end
+    subgraph FIELD [**현장**]
+        Router2((AX3000M&lt;br/&gt;Router 2))
+        Router3((AX3000M&lt;br/&gt;Router N))
+        ORIN[Jetson ORIN PC]
+        Go1[Unitree Go1]
+    end
+    subgraph CICD [**학습 프레임워크-IsaacLab**]
+        TrainServer(학습 프레임워크&lt;br/&gt;RL/딥러닝 서버)
+        IntNet(통합 네트워크)
+        FalNet(Falldown 네트워크)
+    end
+    Joy -- "/joy" --&gt; Laptop
+    Laptop -- ROS2 --&gt; ORIN
+    Go1 -- 센서 데이터 --&gt; ORIN
+    ORIN -- 제어값 --&gt; Go1
+    Go1 -- 모니터링 --&gt; Laptop
+    Laptop -- 제어기 변경 및 각종 버튼 --&gt; Go1
+    Laptop --Ethernet--&gt; Router1
+    Router1 &lt;--Wi‑Fi--&gt; Router2
+    Router2 &lt;--Wi‑Fi--&gt; ORIN
+    ORIN &lt;--Wi‑Fi--&gt; Router3
+    Router2 &lt;--Wi‑Fi--&gt; Router3
+    TrainServer -- 학습 --&gt; IntNet
+    TrainServer -- 학습 --&gt; FalNet
+    IntNet -- 배포 --&gt; ORIN
+    FalNet -- 배포 --&gt; ORIN
+
+    style REMOTE fill:#f9f9ff,stroke:#888,stroke-width:2px
+    style FIELD fill:#eaffea,stroke:#888,stroke-width:2px
+    style CICD fill:#fffbe6,stroke:#e6b800,stroke-width:2px
+</pre>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../../../images/2025-05-06-icros2025-intro/image-20250506220433108.png" class="img-fluid figure-img"></p>
-<figcaption>image-20250506220433108</figcaption>
-</figure>
+<p></p></figure><p></p>
+</div>
+</div>
 </div>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 84%">
+<col style="width: 23%">
+<col style="width: 76%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>항목</th>
-<th>내용</th>
+<th>구성요소</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>트랙</td>
-<td>A(수령)~B(도착) 구역, 장애물(연석, 볼라드, 킥보드 등), 바닥: 단단한 재질 + 섬유 트랙 + 나무</td>
+<td>Joystick</td>
+<td>원격 조이스틱 입력 장치. 사용자가 로봇을 직접 조종할 수 있음</td>
 </tr>
 <tr class="even">
-<td>장애물 규정</td>
-<td>로봇 너비 이상 간격, 폼/고무/나무 등 안전 재질, 충돌 시 손상 없어야 함</td>
+<td>노트북 (Viewer)</td>
+<td>조이스틱 신호 수신, 실시간 모니터링, 제어 버튼 제공</td>
+</tr>
+<tr class="odd">
+<td>Router</td>
+<td>현장/원격 네트워크 연결 및 무선 품질 보완을 위한 메쉬망 구축(여러 대 사용)</td>
+</tr>
+<tr class="even">
+<td>Jetson ORIN PC</td>
+<td>로봇 제어 연산, 센서 데이터 처리, ROS2 통신의 중심</td>
+</tr>
+<tr class="odd">
+<td>Unitree Go1</td>
+<td>실제 사족보행 로봇, 센서 데이터 송신 및 제어 명령 수신</td>
+</tr>
+<tr class="even">
+<td>학습 프레임워크</td>
+<td>RL/딥러닝 등 제어기 학습 및 모델 생성 서버</td>
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
-<section id="심판-및-운영" class="level3">
-<h3 class="anchored" data-anchor-id="심판-및-운영">5. 심판 및 운영</h3>
+<section id="시퀀스-다이어그램" class="level2">
+<h2 class="anchored" data-anchor-id="시퀀스-다이어그램">4. 시퀀스 다이어그램</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant Joy as Joystick
+    participant NB as 노트북
+    participant ORIN as ORIN PC
+    participant Go1 as Unitree Go1
+
+    Joy-&gt;&gt;NB: /joy 메시지
+    NB-&gt;&gt;ORIN: /joy 전송
+    Go1-&gt;&gt;ORIN: 센서 데이터
+    ORIN-&gt;&gt;ORIN: NN 추론
+    ORIN-&gt;&gt;Go1: 제어 명령
+    Go1--&gt;&gt;NB: 실시간 모니터(카메라 및 센서 데이터 등 /Read Only)
+    NB--&gt;&gt;Go1: 버튼 입력(제어기 변경 및 특정 기능 버튼 등 /Write Only)
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="클래스-다이어그램-ros2-노드-기준" class="level2">
+<h2 class="anchored" data-anchor-id="클래스-다이어그램-ros2-노드-기준">5. 클래스 다이어그램 (ROS2 노드 기준)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">classDiagram
+    class JoyInputHandler {
+        +subscribeJoy()
+        +mapToInput()
+    }
+    class UnifiedController {
+        +forward()
+        +turn()
+        +updateState()
+    }
+    class FalldownController {
+        +detectFall()
+        +recover()
+    }
+    class NetworkInterface {
+        +runInference()
+        +sendCommands()
+    }
+    JoyInputHandler --&gt; NetworkInterface
+    NetworkInterface --&gt; UnifiedController
+    NetworkInterface --&gt; FalldownController
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><code>위 표는 예시임. 실제 코드를 확인하여 클래스 다이어그램을 재구축할 예정.</code></p>
+</section>
+<section id="일정-gantt" class="level2">
+<h2 class="anchored" data-anchor-id="일정-gantt">6. 일정 (Gantt)</h2>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">gantt
+    title 2025 사족보행 로봇 대회 준비 일정
+    dateFormat  YYYY-MM-DD
+    axisFormat  %m/%d
+    section 설계
+    시스템 아키텍처 확정 :done, arch, 2025-05-07,3d
+    section RL 제어기
+    통합 제어기 학습 :u_ctrl, 2025-05-10,14d
+    Falldown 제어기 학습 :f_ctrl, after u_ctrl,7d
+    section 하드웨어
+    ORIN 장착 및 세팅 :orin, 2025-05-10,10d
+    라우터 구성 :router, after orin,5d
+    section UI
+    Viewer UI 개발 :ui1, 2025-05-10,14d
+    조이스틱 통합 :joyint, after ui1,5d
+    section 테스트
+    1차 통합 테스트 :test1, 2025-06-05,5d
+    필드 테스트 :test2, 2025-06-12,5d
+    버퍼 &amp; 폴리싱 :buffer, 2025-06-19,5d
+    최종 배포 :milestone, 2025-06-25,1d
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="주별-칸반-보드-책임" class="level2">
+<h2 class="anchored" data-anchor-id="주별-칸반-보드-책임">7. 주별 칸반 보드 &amp; 책임</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 86%">
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 18%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>항목</th>
-<th>내용</th>
+<th>주차</th>
+<th>기간</th>
+<th>화면/뷰어</th>
+<th>제어기 학습</th>
+<th>하드웨어</th>
+<th>통합·PM</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>심판 권한</td>
-<td>규정 위반/위험 시 경기 중단, 점수 반영, 불공정 행위 시 기록 무효화</td>
+<td>1</td>
+<td>5/7–5/11</td>
+<td>UI 와이어프레임 설계</td>
+<td>IsaacLab 환경 세팅</td>
+<td>ORIN 장착 구조 설계</td>
+<td>전체 아키텍처 문서화</td>
 </tr>
 <tr class="even">
-<td>오픈소스</td>
-<td>우승팀 알고리즘 오픈소스 공개 권장</td>
+<td>2</td>
+<td>5/12–5/18</td>
+<td>초기 Viewer 구현</td>
+<td>통합 제어기 학습 시작</td>
+<td>ORIN 케이블링 &amp; 전원</td>
+<td>ROS2 인터페이스 정의</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>5/19–5/25</td>
+<td>조이스틱 입력 연동</td>
+<td>학습 지속 &amp; 로그 분석</td>
+<td>라우터 테스트</td>
+<td>통신 지연 측정</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>5/26–6/1</td>
+<td>센서 데이터 오버레이</td>
+<td>Falldown 학습 시작</td>
+<td>ORIN‑Go1 통신 벤치마킹</td>
+<td>HIL 테스트</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>6/2–6/8</td>
+<td>UI 안정화 &amp; 예외처리</td>
+<td>학습 완료 &amp; 모델 추출</td>
+<td>라우터 메쉬 구성</td>
+<td>초기 통합 테스트</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>6/9–6/15</td>
+<td>UX 피드백 반영</td>
+<td>최적화</td>
+<td>로봇 하드웨어 구성</td>
+<td>시스템 리허설</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>6/16–6/22</td>
+<td>UI 기능 동결</td>
+<td>최적화</td>
+<td>예비 HW 패킹</td>
+<td>현장 리허설</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>6/23–6/25</td>
+<td></td>
+<td>테스트 지원</td>
+<td></td>
+<td>최종 체크 &amp; 대회</td>
 </tr>
 </tbody>
 </table>
-<hr>
-</section>
-<section id="대회-일정-2025년-기준" class="level3">
-<h3 class="anchored" data-anchor-id="대회-일정-2025년-기준">6. 대회 일정 (2025년 기준)</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>날짜</th>
-<th>내용</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>4월 14일</td>
-<td>참가자 등록 시작</td>
-</tr>
-<tr class="even">
-<td>5월 31일</td>
-<td>참가자 등록 종료</td>
-</tr>
-<tr class="odd">
-<td>6월 13일</td>
-<td>참가자 오리엔테이션</td>
-</tr>
-<tr class="even">
-<td>6월 25일</td>
-<td>개회식 및 트랙 공개, 기기검사</td>
-</tr>
-<tr class="odd">
-<td>6월 26일</td>
-<td>예선</td>
-</tr>
-<tr class="even">
-<td>6월 27일</td>
-<td>본선 및 폐회식</td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-</section>
-<section id="참고-및-추가-안내" class="level2">
-<h2 class="anchored" data-anchor-id="참고-및-추가-안내">참고 및 추가 안내</h2>
-<ul>
-<li><strong>자세한 규정 전문</strong>은 팀원 모두가 숙지해야 하며, <a href="https://docs.google.com/document/d/1uWT6aZbkQ8ABFvxvbo_JU8ZLgdam96n36eQGzxUGPbY/edit?tab=t.0">대회 공식 규정 문서</a> 및 <a href="http://qrckorea.org/">QRCKOREA 공식 홈페이지</a>에서 최신 정보를 확인하세요.</li>
-<li><strong>원격 조종 부문</strong>은 콘솔 내 2명만 조종 가능, 외부 정보 제공 금지 등 현장 규정에 유의해야 합니다.</li>
-<li><strong>배달 미션</strong>과 <strong>장애물 통과</strong> 등 실제 미션 상황을 충분히 연습하고, 페널티 항목(물품 낙하, 장애물 충돌 등)에 주의하세요.</li>
-</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

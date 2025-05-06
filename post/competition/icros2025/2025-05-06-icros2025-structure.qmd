@@ -1,0 +1,160 @@
+---
+title: "[icros2025] 2. 프로젝트 개념도"
+description: icros2025 프로젝트 개념도
+author: Jinwon Kim
+author-meta: mqjinwon@gmail.com
+date: "2025-05-06T19:33:00"
+categories: [Competition, legged-robot]
+image: ../../../images/review.jpg
+toc: true
+code-fold: true
+---
+
+# 사족보행 로봇 대회 준비 프로젝트 페이지
+
+## 1. 개요
+
+본 페이지는 2025년 6월 25일까지 진행되는 사족보행 로봇(Unitree Go1) 대회 준비 과정을 정리합니다. 시스템 아키텍처, 주요 다이어그램, 일정, 주별 작업 분배 등을 포함하여 팀원들이 한눈에 전체 진행 상황을 파악하도록 구성했습니다.
+
+## 2. 팀 구성
+
+| 역할        | 인원   | 주요 책임                         |
+| --------- | ---- | ----------------------------- |
+| 화면/뷰어 개발  | (이름) | Viewer UI, 버튼, 조이스틱 통합        |
+| 제어기 학습    | (이름) | 통합·Falldown 제어기 학습 (2개로 구성), 네트워크 export 및 코드 최적화 |
+| 하드웨어/네트워크 | (이름) | ORIN 장착, Router 구성(mesho 망), 전원/열 관리   |
+| 통합·PM     | (이름) | 전체 일정 관리, 시스템 통합, 테스트         |
+
+## 3. 시스템 아키텍처
+
+```{mermaid}
+flowchart TD
+    subgraph REMOTE [**원격**]
+        Joy[Joystick]
+        Laptop[노트북<br/>Viewer + Buttons]
+        Router1((AX3000M<br/>Router 1))
+    end
+    subgraph FIELD [**현장**]
+        Router2((AX3000M<br/>Router 2))
+        Router3((AX3000M<br/>Router N))
+        ORIN[Jetson ORIN PC]
+        Go1[Unitree Go1]
+    end
+    subgraph CICD [**학습 프레임워크-IsaacLab**]
+        TrainServer(학습 프레임워크<br/>RL/딥러닝 서버)
+        IntNet(통합 네트워크)
+        FalNet(Falldown 네트워크)
+    end
+    Joy -- "/joy" --> Laptop
+    Laptop -- ROS2 --> ORIN
+    Go1 -- 센서 데이터 --> ORIN
+    ORIN -- 제어값 --> Go1
+    Go1 -- 모니터링 --> Laptop
+    Laptop -- 제어기 변경 및 각종 버튼 --> Go1
+    Laptop --Ethernet--> Router1
+    Router1 <--Wi‑Fi--> Router2
+    Router2 <--Wi‑Fi--> ORIN
+    ORIN <--Wi‑Fi--> Router3
+    Router2 <--Wi‑Fi--> Router3
+    TrainServer -- 학습 --> IntNet
+    TrainServer -- 학습 --> FalNet
+    IntNet -- 배포 --> ORIN
+    FalNet -- 배포 --> ORIN
+
+    style REMOTE fill:#f9f9ff,stroke:#888,stroke-width:2px
+    style FIELD fill:#eaffea,stroke:#888,stroke-width:2px
+    style CICD fill:#fffbe6,stroke:#e6b800,stroke-width:2px
+```
+
+| 구성요소         | 설명                                                         |
+|------------------|------------------------------------------------------------|
+| Joystick         | 원격 조이스틱 입력 장치. 사용자가 로봇을 직접 조종할 수 있음      |
+| 노트북 (Viewer)  | 조이스틱 신호 수신, 실시간 모니터링, 제어 버튼 제공              |
+| Router           | 현장/원격 네트워크 연결 및 무선 품질 보완을 위한 메쉬망 구축(여러 대 사용) |
+| Jetson ORIN PC   | 로봇 제어 연산, 센서 데이터 처리, ROS2 통신의 중심               |
+| Unitree Go1      | 실제 사족보행 로봇, 센서 데이터 송신 및 제어 명령 수신            |
+| 학습 프레임워크   | RL/딥러닝 등 제어기 학습 및 모델 생성 서버                        |
+
+
+## 4. 시퀀스 다이어그램
+
+```{mermaid}
+sequenceDiagram
+    participant Joy as Joystick
+    participant NB as 노트북
+    participant ORIN as ORIN PC
+    participant Go1 as Unitree Go1
+
+    Joy->>NB: /joy 메시지
+    NB->>ORIN: /joy 전송
+    Go1->>ORIN: 센서 데이터
+    ORIN->>ORIN: NN 추론
+    ORIN->>Go1: 제어 명령
+    Go1-->>NB: 실시간 모니터(카메라 및 센서 데이터 등 /Read Only)
+    NB-->>Go1: 버튼 입력(제어기 변경 및 특정 기능 버튼 등 /Write Only)
+```
+
+## 5. 클래스 다이어그램 (ROS2 노드 기준)
+```{mermaid}
+classDiagram
+    class JoyInputHandler {
+        +subscribeJoy()
+        +mapToInput()
+    }
+    class UnifiedController {
+        +forward()
+        +turn()
+        +updateState()
+    }
+    class FalldownController {
+        +detectFall()
+        +recover()
+    }
+    class NetworkInterface {
+        +runInference()
+        +sendCommands()
+    }
+    JoyInputHandler --> NetworkInterface
+    NetworkInterface --> UnifiedController
+    NetworkInterface --> FalldownController
+```
+
+`위 표는 예시임. 실제 코드를 확인하여 클래스 다이어그램을 재구축할 예정.`
+
+## 6. 일정 (Gantt)
+
+```{mermaid}
+gantt
+    title 2025 사족보행 로봇 대회 준비 일정
+    dateFormat  YYYY-MM-DD
+    axisFormat  %m/%d
+    section 설계
+    시스템 아키텍처 확정 :done, arch, 2025-05-07,3d
+    section RL 제어기
+    통합 제어기 학습 :u_ctrl, 2025-05-10,14d
+    Falldown 제어기 학습 :f_ctrl, after u_ctrl,7d
+    section 하드웨어
+    ORIN 장착 및 세팅 :orin, 2025-05-10,10d
+    라우터 구성 :router, after orin,5d
+    section UI
+    Viewer UI 개발 :ui1, 2025-05-10,14d
+    조이스틱 통합 :joyint, after ui1,5d
+    section 테스트
+    1차 통합 테스트 :test1, 2025-06-05,5d
+    필드 테스트 :test2, 2025-06-12,5d
+    버퍼 & 폴리싱 :buffer, 2025-06-19,5d
+    최종 배포 :milestone, 2025-06-25,1d
+```
+
+## 7. 주별 칸반 보드 & 책임
+
+| 주차 | 기간        | 화면/뷰어         | 제어기 학습         | 하드웨어           | 통합·PM         |
+| ------ | --------- | ------------- | -------------- | -------------- | ------------- |
+| 1  | 5/7–5/11  | UI 와이어프레임 설계  | IsaacLab 환경 세팅 | ORIN 장착 구조 설계  | 전체 아키텍처 문서화    |
+| 2  | 5/12–5/18 | 초기 Viewer 구현  | 통합 제어기 학습 시작   | ORIN 케이블링 & 전원 | ROS2 인터페이스 정의 |
+| 3  | 5/19–5/25 | 조이스틱 입력 연동    | 학습 지속 & 로그 분석  | 라우터 테스트        | 통신 지연 측정      |
+| 4  | 5/26–6/1  | 센서 데이터 오버레이   | Falldown 학습 시작 | ORIN‑Go1 통신 벤치마킹 | HIL 테스트       |
+| 5  | 6/2–6/8   | UI 안정화 & 예외처리 | 학습 완료 & 모델 추출  | 라우터 메쉬 구성   | 초기 통합 테스트     |
+| 6  | 6/9–6/15  | UX 피드백 반영     | 최적화       | 로봇 하드웨어 구성      | 시스템 리허설       |
+| 7  | 6/16–6/22 | UI 기능 동결      | 최적화       | 예비 HW 패킹       | 현장 리허설        |
+| 8  | 6/23–6/25 |     | 테스트 지원         |           | 최종 체크 & 대회    |
