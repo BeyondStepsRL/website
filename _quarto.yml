@@ -9,6 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - post.qmd
+      - competition.qmd
       - goal.qmd
 
 format:
